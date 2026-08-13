@@ -1,0 +1,2988 @@
+{
+  "generatedAt": "2026-08-13T20:32:04.804Z",
+  "index": {
+    "version": 1,
+    "builtAt": "2026-08-13T20:10:54.206Z",
+    "model": "Xenova/all-MiniLM-L6-v2",
+    "dims": 384,
+    "passageCount": 11904,
+    "chunkCount": 78342,
+    "strategyCounts": {
+      "PASSAGE": 11904,
+      "FIXED": 12462,
+      "SENTENCE_WINDOW": 35105,
+      "SEMANTIC": 24078,
+      "STRUCTURAL": 12907,
+      "PROPOSITION": 33706
+    },
+    "strategyProposed": {
+      "PASSAGE": 11904,
+      "FIXED": 12462,
+      "SENTENCE_WINDOW": 35105,
+      "SEMANTIC": 24078,
+      "STRUCTURAL": 12907,
+      "PROPOSITION": 33706
+    },
+    "source": "ai4bharat/MSMARCO-XI validation split",
+    "buildSeconds": 380.474,
+    "bytes": {
+      "passages": 13940350,
+      "chunks": 1566840,
+      "binary": 3760416,
+      "int8": 30083328,
+      "total": 49350934
+    }
+  },
+  "indexLoadMs": 205.67530000000002,
+  "node": "v24.14.0",
+  "platform": "win32-x64",
+  "cpu": "AMD Ryzen 9 8940HX with Radeon Graphics        ",
+  "latency": {
+    "total": {
+      "n": 400,
+      "mean": 72.54065075000024,
+      "p50": 72.04229999999916,
+      "p70": 76.71039999999903,
+      "p90": 85.18780000000152,
+      "p95": 89.64250000000175,
+      "p99": 106.33940000000439,
+      "p100": 115.65510000000359
+    },
+    "perStage": {
+      "guard.input": {
+        "n": 400,
+        "mean": 0.016902250000176765,
+        "p50": 0.015900000000328873,
+        "p70": 0.017700000000331784,
+        "p90": 0.02050000000053842,
+        "p95": 0.022800000000643195,
+        "p99": 0.037599999999656575,
+        "p100": 0.06449999999676947
+      },
+      "retrieve.embed": {
+        "n": 400,
+        "mean": 2.836412500000014,
+        "p50": 2.7616000000016356,
+        "p70": 2.9360000000015134,
+        "p90": 3.314699999998993,
+        "p95": 3.549699999999575,
+        "p99": 4.075699999999415,
+        "p100": 6.090299999999843
+      },
+      "retrieve.dense": {
+        "n": 400,
+        "mean": 7.529809999999998,
+        "p50": 7.527600000001257,
+        "p70": 7.668300000001182,
+        "p90": 7.969900000000052,
+        "p95": 8.24539999999979,
+        "p99": 9.636099999999715,
+        "p100": 13.588799999997718
+      },
+      "retrieve.lexical": {
+        "n": 400,
+        "mean": 1.455197249999959,
+        "p50": 1.386899999997695,
+        "p70": 1.5892000000003463,
+        "p90": 2.1114999999990687,
+        "p95": 2.384600000001228,
+        "p99": 3.1743999999998778,
+        "p100": 3.6278999999994994
+      },
+      "retrieve.features": {
+        "n": 400,
+        "mean": 1.2794402499999364,
+        "p50": 1.238099999998667,
+        "p70": 1.4765000000006694,
+        "p90": 1.8192999999992026,
+        "p95": 2.135200000000623,
+        "p99": 2.7295000000012806,
+        "p100": 3.9799999999995634
+      },
+      "retrieve.cross": {
+        "n": 400,
+        "mean": 42.012688250000025,
+        "p50": 40.467900000000554,
+        "p70": 44.663400000001275,
+        "p90": 52.65070000000014,
+        "p95": 57.66259999999966,
+        "p99": 64.65320000000065,
+        "p100": 74.94759999999951
+      },
+      "retrieve.mmr": {
+        "n": 400,
+        "mean": 0.8876425000001018,
+        "p50": 0.9256999999997788,
+        "p70": 0.9589999999989232,
+        "p90": 1.0014000000010128,
+        "p95": 1.0142999999989115,
+        "p99": 1.0388999999995576,
+        "p100": 1.080999999998312
+      },
+      "retrieve": {
+        "n": 400,
+        "mean": 56.11096750000005,
+        "p50": 54.48829999999907,
+        "p70": 58.968300000000454,
+        "p90": 67.39229999999952,
+        "p95": 73.64570000000094,
+        "p99": 80.58950000000186,
+        "p100": 94.09889999999723
+      },
+      "guard.retrieval": {
+        "n": 400,
+        "mean": 0.0037885000000699165,
+        "p50": 0.0036000000000058208,
+        "p70": 0.003899999999703141,
+        "p90": 0.004399999999805004,
+        "p95": 0.00480000000243308,
+        "p99": 0.008800000000519503,
+        "p100": 0.01420000000143773
+      },
+      "answer.extract": {
+        "n": 365,
+        "mean": 17.950925753424595,
+        "p50": 18.099200000000565,
+        "p70": 19.011199999999917,
+        "p90": 20.811600000000908,
+        "p95": 22.226200000000972,
+        "p99": 24.839799999997922,
+        "p100": 29.446200000000317
+      },
+      "guard.answer": {
+        "n": 365,
+        "mean": 0.002708493150644182,
+        "p50": 0.0025000000023283064,
+        "p70": 0.002800000000206637,
+        "p90": 0.0033000000003085006,
+        "p95": 0.003500000000713044,
+        "p99": 0.007300000001123408,
+        "p100": 0.016700000000128057
+      },
+      "guard.grounding": {
+        "n": 317,
+        "mean": 0.03318769716098253,
+        "p50": 0.030099999999947613,
+        "p70": 0.03499999999985448,
+        "p90": 0.04920000000129221,
+        "p95": 0.059000000001105946,
+        "p99": 0.09690000000045984,
+        "p100": 0.22880000000077416
+      }
+    },
+    "records": [
+      {
+        "question": "hot to transfer music to my samsung s6",
+        "status": "ANSWERED",
+        "pipelineMs": 115.65510000000359
+      },
+      {
+        "question": "calories in a small cucumber",
+        "status": "ANSWERED",
+        "pipelineMs": 110.12529999999879
+      },
+      {
+        "question": "does iron man civil war suit give him power",
+        "status": "ANSWERED",
+        "pipelineMs": 109.05139999999665
+      },
+      {
+        "question": "how to make oobleck with flour and water",
+        "status": "ANSWERED",
+        "pipelineMs": 108.3292000000074
+      },
+      {
+        "question": "continental extremecontact dws canada price",
+        "status": "ANSWERED",
+        "pipelineMs": 106.33940000000439
+      },
+      {
+        "question": "how to install solaris cluster 4.2 in solaris 11",
+        "status": "ANSWERED",
+        "pipelineMs": 102.22509999999966
+      },
+      {
+        "question": "cannot read property 'selectedindex' of null",
+        "status": "ANSWERED",
+        "pipelineMs": 101.6224000000002
+      },
+      {
+        "question": "how to link misfit shine to iphone",
+        "status": "ANSWERED",
+        "pipelineMs": 97.6417999999976
+      },
+      {
+        "question": "how long does rough hair shrink",
+        "status": "ABSTAINED",
+        "pipelineMs": 97.35930000000008
+      },
+      {
+        "question": "how to make a trailer ramp",
+        "status": "ANSWERED",
+        "pipelineMs": 96.6861000000008
+      },
+      {
+        "question": "how to prepare beef brisket in the oven",
+        "status": "ANSWERED",
+        "pipelineMs": 96.40760000000228
+      },
+      {
+        "question": "how to cook flounder on the grill",
+        "status": "ANSWERED",
+        "pipelineMs": 96.34769999999662
+      },
+      {
+        "question": "are headaches a form of a virus?",
+        "status": "ABSTAINED",
+        "pipelineMs": 95.64450000000215
+      },
+      {
+        "question": "how to make japanese ramen broth boil for 12 hours",
+        "status": "ANSWERED",
+        "pipelineMs": 95.42859999999928
+      },
+      {
+        "question": "can you reserve a site at eklutna campground",
+        "status": "ANSWERED",
+        "pipelineMs": 94.7623999999978
+      },
+      {
+        "question": "actress who born at litrhuania",
+        "status": "ABSTAINED",
+        "pipelineMs": 94.2032999999974
+      },
+      {
+        "question": "does weightlifting reduce blood pressure for over 55s",
+        "status": "ANSWERED",
+        "pipelineMs": 94.01200000000063
+      },
+      {
+        "question": "average teacher salary in usa 2013",
+        "status": "ANSWERED",
+        "pipelineMs": 93.0827999999965
+      },
+      {
+        "question": "how many calories in marshmallow salad with nuts",
+        "status": "ANSWERED",
+        "pipelineMs": 92.00319999999738
+      },
+      {
+        "question": "how to get rid of excess fluid in your body",
+        "status": "ANSWERED",
+        "pipelineMs": 90.05680000000575
+      },
+      {
+        "question": "average size of college student housing",
+        "status": "ABSTAINED",
+        "pipelineMs": 89.64250000000175
+      },
+      {
+        "question": "how long before your body gets back to normal after binge drinking",
+        "status": "ANSWERED",
+        "pipelineMs": 89.17990000000282
+      },
+      {
+        "question": "average monthly cost nursing home",
+        "status": "ANSWERED",
+        "pipelineMs": 88.074099999998
+      },
+      {
+        "question": "how much to open a renter's insurance",
+        "status": "ANSWERED",
+        "pipelineMs": 87.9452999999994
+      },
+      {
+        "question": "explain how volcanoes causes pollution",
+        "status": "ANSWERED",
+        "pipelineMs": 87.89970000000176
+      },
+      {
+        "question": "how does damp affect copd",
+        "status": "ABSTAINED",
+        "pipelineMs": 87.83090000000084
+      },
+      {
+        "question": "flights from chicago to ronald reagan airport",
+        "status": "ANSWERED",
+        "pipelineMs": 87.82350000000133
+      },
+      {
+        "question": "how to become a traveling physical therapist",
+        "status": "ANSWERED",
+        "pipelineMs": 87.64580000000024
+      },
+      {
+        "question": "what is best over the counter creams for back spasms",
+        "status": "ABSTAINED",
+        "pipelineMs": 87.63540000000648
+      },
+      {
+        "question": "how long keep IRS records",
+        "status": "ANSWERED",
+        "pipelineMs": 87.52350000000297
+      },
+      {
+        "question": "difference between a celsius and pounds",
+        "status": "ABSTAINED",
+        "pipelineMs": 87.09759999999733
+      },
+      {
+        "question": "sulfasalazine rheumatoid arthritis side effects",
+        "status": "ANSWERED",
+        "pipelineMs": 87.04420000000027
+      },
+      {
+        "question": "chemical formula for cuprous oxide",
+        "status": "ANSWERED",
+        "pipelineMs": 86.52890000000116
+      },
+      {
+        "question": "do it yourself grout cleaning",
+        "status": "ANSWERED",
+        "pipelineMs": 86.17030000000159
+      },
+      {
+        "question": "how to deal with fear in your body",
+        "status": "ANSWERED",
+        "pipelineMs": 85.95919999999751
+      },
+      {
+        "question": "how to connect two laptops using usb cable",
+        "status": "ANSWERED",
+        "pipelineMs": 85.95209999999861
+      },
+      {
+        "question": "can jaundice come back",
+        "status": "ANSWERED",
+        "pipelineMs": 85.92959999999948
+      },
+      {
+        "question": "entropy of elements",
+        "status": "ANSWERED",
+        "pipelineMs": 85.8803999999991
+      },
+      {
+        "question": "combine supported files in acrobat free download",
+        "status": "ANSWERED",
+        "pipelineMs": 85.84000000000742
+      },
+      {
+        "question": "DIY How to Repaint Old Furniture",
+        "status": "ABSTAINED",
+        "pipelineMs": 85.81559999999808
+      },
+      {
+        "question": "how do i find the mac on backberry",
+        "status": "ABSTAINED",
+        "pipelineMs": 85.18780000000152
+      },
+      {
+        "question": "cost of portable color tv videocon",
+        "status": "ANSWERED",
+        "pipelineMs": 84.78870000000097
+      },
+      {
+        "question": "borgata buffet price",
+        "status": "ANSWERED",
+        "pipelineMs": 84.22510000000148
+      },
+      {
+        "question": "average temperature by month in payson, az",
+        "status": "ANSWERED",
+        "pipelineMs": 84.03819999999541
+      },
+      {
+        "question": "average number of residents per apartment",
+        "status": "ANSWERED",
+        "pipelineMs": 83.96420000000217
+      },
+      {
+        "question": "calfire average revenue plan reviews",
+        "status": "ABSTAINED",
+        "pipelineMs": 83.92519999999422
+      },
+      {
+        "question": "how often should you do a brace on a fence",
+        "status": "ANSWERED",
+        "pipelineMs": 83.8778000000093
+      },
+      {
+        "question": "what is best oven temp to use to keep food warm",
+        "status": "ANSWERED",
+        "pipelineMs": 83.72319999999672
+      },
+      {
+        "question": "foods and supplements to lower blood sugar",
+        "status": "ANSWERED",
+        "pipelineMs": 83.44689999999719
+      },
+      {
+        "question": "how to find surface area of similar shapes",
+        "status": "ANSWERED",
+        "pipelineMs": 83.30209999998988
+      },
+      {
+        "question": "what is betaine plus hp for",
+        "status": "ANSWERED",
+        "pipelineMs": 83.27439999999842
+      },
+      {
+        "question": "definition of relay forms",
+        "status": "ANSWERED",
+        "pipelineMs": 83.25689999999668
+      },
+      {
+        "question": "how to pass an etg urine test",
+        "status": "ANSWERED",
+        "pipelineMs": 83.10840000000462
+      },
+      {
+        "question": "hawaii seasons with average weather",
+        "status": "ANSWERED",
+        "pipelineMs": 82.90100000000166
+      },
+      {
+        "question": "how much does it cost to buy a great Florida Insurance franchise",
+        "status": "ANSWERED",
+        "pipelineMs": 82.64039999999659
+      },
+      {
+        "question": "can a higher tsh level cause a negative pregnancy test",
+        "status": "ANSWERED",
+        "pipelineMs": 82.52389999999923
+      },
+      {
+        "question": "how long does a physician have to sign an order for observation",
+        "status": "ANSWERED",
+        "pipelineMs": 82.40459999999803
+      },
+      {
+        "question": "do gop want trump to be impeached",
+        "status": "ANSWERED",
+        "pipelineMs": 82.39250000000175
+      },
+      {
+        "question": "forensic evidence technician schooling",
+        "status": "ANSWERED",
+        "pipelineMs": 82.22860000000128
+      },
+      {
+        "question": "do red delicious apples make good applesauce",
+        "status": "ANSWERED",
+        "pipelineMs": 82.13739999999962
+      },
+      {
+        "question": "death head units definition",
+        "status": "ANSWERED",
+        "pipelineMs": 82.13080000000082
+      },
+      {
+        "question": "are retinal vein occlusions caused by diabetes?",
+        "status": "ANSWERED",
+        "pipelineMs": 82.12219999999797
+      },
+      {
+        "question": "do people really have two hearts",
+        "status": "ANSWERED",
+        "pipelineMs": 81.54490000000078
+      },
+      {
+        "question": "how to make xcom 2 run smoother",
+        "status": "ABSTAINED",
+        "pipelineMs": 81.495100000001
+      },
+      {
+        "question": "average cost of canine teeth cleaning",
+        "status": "ANSWERED",
+        "pipelineMs": 81.36899999999878
+      },
+      {
+        "question": "average income for russian",
+        "status": "ANSWERED",
+        "pipelineMs": 81.30949999999575
+      },
+      {
+        "question": "how many ounces of liquid is in one gallon",
+        "status": "ANSWERED",
+        "pipelineMs": 81.02919999999904
+      },
+      {
+        "question": "what is bertelli mean?",
+        "status": "ANSWERED",
+        "pipelineMs": 81.00179999999818
+      },
+      {
+        "question": "how many syllables are in the word fired",
+        "status": "ANSWERED",
+        "pipelineMs": 80.92349999999715
+      },
+      {
+        "question": "are corn meal and corn flour the same",
+        "status": "ANSWERED",
+        "pipelineMs": 80.75040000000081
+      },
+      {
+        "question": "how long does a new york enhanced driver's license",
+        "status": "ANSWERED",
+        "pipelineMs": 80.57890000000407
+      },
+      {
+        "question": "how much is johnny manziel worth",
+        "status": "ANSWERED",
+        "pipelineMs": 80.56660000000556
+      },
+      {
+        "question": "average diesel retail price",
+        "status": "ANSWERED",
+        "pipelineMs": 80.51970000000438
+      },
+      {
+        "question": "what is best day to buy stock]",
+        "status": "ANSWERED",
+        "pipelineMs": 80.35490000000209
+      },
+      {
+        "question": "what is bdops",
+        "status": "ANSWERED",
+        "pipelineMs": 80.18240000000151
+      },
+      {
+        "question": "how to see the most of the grand canyon during a visit",
+        "status": "ANSWERED",
+        "pipelineMs": 79.95330000000104
+      },
+      {
+        "question": "calories calculator to lose weight for women",
+        "status": "ANSWERED",
+        "pipelineMs": 79.94149999999718
+      },
+      {
+        "question": "do indians eat rice",
+        "status": "ANSWERED",
+        "pipelineMs": 79.92680000000018
+      },
+      {
+        "question": "what is basic? uni",
+        "status": "ANSWERED",
+        "pipelineMs": 79.91169999999875
+      },
+      {
+        "question": "summit league commissioner",
+        "status": "ANSWERED",
+        "pipelineMs": 79.84189999999944
+      },
+      {
+        "question": "how much is it per day when locked up in county jail",
+        "status": "ANSWERED",
+        "pipelineMs": 79.82530000000042
+      },
+      {
+        "question": "aldi australia opening hours",
+        "status": "ANSWERED",
+        "pipelineMs": 79.78030000000126
+      },
+      {
+        "question": "can obama run for president again",
+        "status": "ANSWERED",
+        "pipelineMs": 79.68770000000222
+      },
+      {
+        "question": "how did erik erikson make changes to psychoanalytic theories",
+        "status": "ANSWERED",
+        "pipelineMs": 79.3818999999985
+      },
+      {
+        "question": "how to calculate yield to call excel",
+        "status": "ANSWERED",
+        "pipelineMs": 79.34609999999884
+      },
+      {
+        "question": "how to grill pork fingers",
+        "status": "ANSWERED",
+        "pipelineMs": 79.25460000000021
+      },
+      {
+        "question": "cannot connect to citrix xenapp server",
+        "status": "ANSWERED",
+        "pipelineMs": 79.03649999999834
+      },
+      {
+        "question": "difference between gaap and ifrs bond issue costs",
+        "status": "ANSWERED",
+        "pipelineMs": 78.92569999999978
+      },
+      {
+        "question": "suntrust routing number for macon ga",
+        "status": "ANSWERED",
+        "pipelineMs": 78.91519999999946
+      },
+      {
+        "question": "superior court efiling phone number",
+        "status": "ANSWERED",
+        "pipelineMs": 78.88920000000144
+      },
+      {
+        "question": "superior gluteal nerve innervates what",
+        "status": "ANSWERED",
+        "pipelineMs": 78.66330000000016
+      },
+      {
+        "question": "army memorandum template fillable pdf",
+        "status": "ABSTAINED",
+        "pipelineMs": 78.54130000000077
+      },
+      {
+        "question": "how many requests per second does amazon get",
+        "status": "ANSWERED",
+        "pipelineMs": 78.50410000000011
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 78.35069999999905
+      },
+      {
+        "question": "galbraith name meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 78.25909999999931
+      },
+      {
+        "question": "benefits of glucocil",
+        "status": "ANSWERED",
+        "pipelineMs": 78.00689999999668
+      },
+      {
+        "question": "how to open The Apple iMac G4/",
+        "status": "ANSWERED",
+        "pipelineMs": 77.99599999999555
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.92720000000008
+      },
+      {
+        "question": "can ear infections cause seizures in cats?",
+        "status": "ANSWERED",
+        "pipelineMs": 77.90600000000086
+      },
+      {
+        "question": "how many kw do solar city panels produce",
+        "status": "ANSWERED",
+        "pipelineMs": 77.89850000000024
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.82520000000113
+      },
+      {
+        "question": "court of two sisters brunch price",
+        "status": "ANSWERED",
+        "pipelineMs": 77.80590000000029
+      },
+      {
+        "question": "definition of excess land",
+        "status": "ANSWERED",
+        "pipelineMs": 77.7652999999973
+      },
+      {
+        "question": "how do i organise an event",
+        "status": "ANSWERED",
+        "pipelineMs": 77.7607999999982
+      },
+      {
+        "question": "sulci definition",
+        "status": "ANSWERED",
+        "pipelineMs": 77.63609999999608
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.57560000000012
+      },
+      {
+        "question": "how much nurse pay",
+        "status": "ANSWERED",
+        "pipelineMs": 77.55119999999442
+      },
+      {
+        "question": "filter what do you say",
+        "status": "ANSWERED",
+        "pipelineMs": 77.28490000000238
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.21749999999884
+      },
+      {
+        "question": "givaudan headquarters phone number",
+        "status": "ANSWERED",
+        "pipelineMs": 77.17290000000139
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.15819999999803
+      },
+      {
+        "question": "stubhub toll free number",
+        "status": "ANSWERED",
+        "pipelineMs": 77.14190000000008
+      },
+      {
+        "question": "are lipids neurotransmitters",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.13319999999658
+      },
+      {
+        "question": "borough of media business privilege tax",
+        "status": "ANSWERED",
+        "pipelineMs": 77.10629999999946
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.09260000000177
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.07730000000083
+      },
+      {
+        "question": "average price for dental implants",
+        "status": "ANSWERED",
+        "pipelineMs": 76.91930000000139
+      },
+      {
+        "question": "does sugarless gum cause diarrhea",
+        "status": "ABSTAINED",
+        "pipelineMs": 76.877199999999
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 76.80459999999948
+      },
+      {
+        "question": "how to make an oil infused herbal infusion",
+        "status": "ANSWERED",
+        "pipelineMs": 76.7469000000001
+      },
+      {
+        "question": "chest pain upper right side feels like something is stuck there when i swallow",
+        "status": "ANSWERED",
+        "pipelineMs": 76.71039999999903
+      },
+      {
+        "question": "can japanese pokemon colosseum celebi be shiny",
+        "status": "ANSWERED",
+        "pipelineMs": 76.70749999999953
+      },
+      {
+        "question": "what is being made by gamma rays",
+        "status": "ANSWERED",
+        "pipelineMs": 76.61549999999625
+      },
+      {
+        "question": "does soy have anything to do with constipation",
+        "status": "ANSWERED",
+        "pipelineMs": 76.45179999999891
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 76.44420000000173
+      },
+      {
+        "question": "how do wifi tablets work",
+        "status": "ANSWERED",
+        "pipelineMs": 76.4339
+      },
+      {
+        "question": "are vasectomies 100%",
+        "status": "ANSWERED",
+        "pipelineMs": 76.42659999999887
+      },
+      {
+        "question": "city of scottsdale recycling schedule",
+        "status": "ANSWERED",
+        "pipelineMs": 76.3880999999983
+      },
+      {
+        "question": "defining cell in array",
+        "status": "ANSWERED",
+        "pipelineMs": 76.2635999999984
+      },
+      {
+        "question": "can you eat after botox",
+        "status": "ANSWERED",
+        "pipelineMs": 76.16290000000299
+      },
+      {
+        "question": "foods that help cramps",
+        "status": "ANSWERED",
+        "pipelineMs": 76.15749999999753
+      },
+      {
+        "question": "different types of construction vehicles",
+        "status": "ANSWERED",
+        "pipelineMs": 76.09469999999783
+      },
+      {
+        "question": "average teaching salary canada",
+        "status": "ANSWERED",
+        "pipelineMs": 76.01239999999962
+      },
+      {
+        "question": "what is bear payne's middle name",
+        "status": "ANSWERED",
+        "pipelineMs": 75.92690000000039
+      },
+      {
+        "question": "differences in greece and modern system",
+        "status": "ANSWERED",
+        "pipelineMs": 75.887500000008
+      },
+      {
+        "question": "age when teeth fall out",
+        "status": "ANSWERED",
+        "pipelineMs": 75.83880000000136
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 75.72220000000016
+      },
+      {
+        "question": "cast of Dancing with the stars",
+        "status": "ANSWERED",
+        "pipelineMs": 75.72170000000187
+      },
+      {
+        "question": "cosmology what is the dark ages",
+        "status": "ANSWERED",
+        "pipelineMs": 75.64400000000751
+      },
+      {
+        "question": "can dehydration cause achy legs",
+        "status": "ABSTAINED",
+        "pipelineMs": 75.63550000000032
+      },
+      {
+        "question": "adderall dose to body weight",
+        "status": "ANSWERED",
+        "pipelineMs": 75.33489999999802
+      },
+      {
+        "question": "cost basis of axa stock from demutualization",
+        "status": "ABSTAINED",
+        "pipelineMs": 75.29719999999725
+      },
+      {
+        "question": "how much does a mini skid steer cost",
+        "status": "ANSWERED",
+        "pipelineMs": 75.29089999999997
+      },
+      {
+        "question": "calendar stone definition",
+        "status": "ANSWERED",
+        "pipelineMs": 75.28260000000591
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 75.18209999999999
+      },
+      {
+        "question": "at what point do hospitals sue",
+        "status": "ANSWERED",
+        "pipelineMs": 75.05590000000302
+      },
+      {
+        "question": "home remedies for pimples",
+        "status": "ANSWERED",
+        "pipelineMs": 75.05210000000079
+      },
+      {
+        "question": "define skin fistula",
+        "status": "ANSWERED",
+        "pipelineMs": 75.00880000000325
+      },
+      {
+        "question": "how many jurors sit on the jury in ireland",
+        "status": "ANSWERED",
+        "pipelineMs": 74.96029999999882
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.86089999999967
+      },
+      {
+        "question": "how much time should you cook smoked turkey wings",
+        "status": "ANSWERED",
+        "pipelineMs": 74.78140000000349
+      },
+      {
+        "question": "definition local disk",
+        "status": "ANSWERED",
+        "pipelineMs": 74.77550000000156
+      },
+      {
+        "question": "causes for fingers to hurt",
+        "status": "ANSWERED",
+        "pipelineMs": 74.75560000000041
+      },
+      {
+        "question": "what is bce production usaf",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.73100000000159
+      },
+      {
+        "question": "half cup how many ounces",
+        "status": "ANSWERED",
+        "pipelineMs": 74.67100000000028
+      },
+      {
+        "question": "cost to install basement and yurt mn",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.66409999999814
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.54249999999229
+      },
+      {
+        "question": "supplements that can lessen tinnitus",
+        "status": "ANSWERED",
+        "pipelineMs": 74.53889999999956
+      },
+      {
+        "question": "calories in coffee-mate natural bliss irish cream",
+        "status": "ANSWERED",
+        "pipelineMs": 74.39619999999923
+      },
+      {
+        "question": "cost to draw house plans",
+        "status": "ANSWERED",
+        "pipelineMs": 74.35589999999866
+      },
+      {
+        "question": "did president clinton impeached",
+        "status": "ANSWERED",
+        "pipelineMs": 74.32819999999992
+      },
+      {
+        "question": "average weather in summer orlando",
+        "status": "ANSWERED",
+        "pipelineMs": 74.28110000000015
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.2725000000064
+      },
+      {
+        "question": "are cosmos annuals",
+        "status": "ANSWERED",
+        "pipelineMs": 74.18229999999676
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.17890000000261
+      },
+      {
+        "question": "edward llewellyn largest black bass caught",
+        "status": "ANSWERED",
+        "pipelineMs": 74.11270000000513
+      },
+      {
+        "question": "did latin come from greek",
+        "status": "ANSWERED",
+        "pipelineMs": 74.04550000000017
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.04539999999906
+      },
+      {
+        "question": "superstore cast and crew",
+        "status": "ANSWERED",
+        "pipelineMs": 74.02899999999863
+      },
+      {
+        "question": "what is bear in russian",
+        "status": "ANSWERED",
+        "pipelineMs": 74.00740000000405
+      },
+      {
+        "question": "can stress crack on glass pane be remedied",
+        "status": "ANSWERED",
+        "pipelineMs": 73.9337000000005
+      },
+      {
+        "question": "are bacteria prokaryotic",
+        "status": "ANSWERED",
+        "pipelineMs": 73.90179999999964
+      },
+      {
+        "question": "can i deduct line 803 on hud-1",
+        "status": "ANSWERED",
+        "pipelineMs": 73.85179999999673
+      },
+      {
+        "question": "causes of trigger finger in children",
+        "status": "ANSWERED",
+        "pipelineMs": 73.81869999999981
+      },
+      {
+        "question": "are phenobarb level blood test",
+        "status": "ANSWERED",
+        "pipelineMs": 73.79240000000209
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 73.68790000000081
+      },
+      {
+        "question": "foods to help vitamin d",
+        "status": "ANSWERED",
+        "pipelineMs": 73.60460000000057
+      },
+      {
+        "question": "subcortical band heterotopia symptoms",
+        "status": "ANSWERED",
+        "pipelineMs": 73.57480000000032
+      },
+      {
+        "question": "does the hyatt ziva have a resort fee",
+        "status": "ANSWERED",
+        "pipelineMs": 73.52940000000308
+      },
+      {
+        "question": "can i open separate share and cash isas in one year",
+        "status": "ANSWERED",
+        "pipelineMs": 73.49410000000353
+      },
+      {
+        "question": "average monthly temperature in sonoma ca",
+        "status": "ANSWERED",
+        "pipelineMs": 73.43490000000384
+      },
+      {
+        "question": "how long does your hair grow in a month",
+        "status": "ANSWERED",
+        "pipelineMs": 73.42740000000049
+      },
+      {
+        "question": "define radical neck",
+        "status": "ANSWERED",
+        "pipelineMs": 73.33330000000205
+      },
+      {
+        "question": "how to make it look like my computer is in india",
+        "status": "ABSTAINED",
+        "pipelineMs": 73.29430000000139
+      },
+      {
+        "question": "sty causes",
+        "status": "ANSWERED",
+        "pipelineMs": 73.28000000000156
+      },
+      {
+        "question": "growlife stock price",
+        "status": "ANSWERED",
+        "pipelineMs": 73.26200000000608
+      },
+      {
+        "question": "delta iota sigma",
+        "status": "ANSWERED",
+        "pipelineMs": 73.23509999999806
+      },
+      {
+        "question": "are tanning salons required to inform customers of risks",
+        "status": "ANSWERED",
+        "pipelineMs": 73.07160000000295
+      },
+      {
+        "question": "distance vision is called",
+        "status": "ANSWERED",
+        "pipelineMs": 72.92829999999594
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 72.91800000000148
+      },
+      {
+        "question": "cost to build a detached  garage",
+        "status": "ANSWERED",
+        "pipelineMs": 72.91299999999865
+      },
+      {
+        "question": "how is caffeine metabolized",
+        "status": "ABSTAINED",
+        "pipelineMs": 72.84550000001036
+      },
+      {
+        "question": "how old was chet atkins when he died?",
+        "status": "ANSWERED",
+        "pipelineMs": 72.75889999999708
+      },
+      {
+        "question": "do you need a degree to be a gym teacher",
+        "status": "ANSWERED",
+        "pipelineMs": 72.71519999999873
+      },
+      {
+        "question": "what is benefit of dual flush toilet",
+        "status": "ANSWERED",
+        "pipelineMs": 72.43659999999727
+      },
+      {
+        "question": "digestive tract cancer symptoms",
+        "status": "ANSWERED",
+        "pipelineMs": 72.40869999999995
+      },
+      {
+        "question": "causes of false negative pregnancy test",
+        "status": "ANSWERED",
+        "pipelineMs": 72.35870000000068
+      },
+      {
+        "question": "what is belgrade bank number at desloge mo",
+        "status": "ANSWERED",
+        "pipelineMs": 72.17859999999928
+      },
+      {
+        "question": "definition of scoff",
+        "status": "ANSWERED",
+        "pipelineMs": 72.11029999999846
+      },
+      {
+        "question": "how long does it take cracked ribs to heal",
+        "status": "ANSWERED",
+        "pipelineMs": 72.10250000000269
+      },
+      {
+        "question": "how old is joe scarborough",
+        "status": "ANSWERED",
+        "pipelineMs": 72.04229999999916
+      },
+      {
+        "question": "superseded general decision number",
+        "status": "ANSWERED",
+        "pipelineMs": 71.9648000000052
+      },
+      {
+        "question": "cost to machine an engine",
+        "status": "ANSWERED",
+        "pipelineMs": 71.95970000000307
+      },
+      {
+        "question": "suit definition",
+        "status": "ANSWERED",
+        "pipelineMs": 71.9320000000007
+      },
+      {
+        "question": "how can your checking account affect your credit score",
+        "status": "ANSWERED",
+        "pipelineMs": 71.52640000000065
+      },
+      {
+        "question": "definition of bandwidth in ict",
+        "status": "ANSWERED",
+        "pipelineMs": 71.5036
+      },
+      {
+        "question": "highest record temperature for redding ca",
+        "status": "ANSWERED",
+        "pipelineMs": 71.39909999999963
+      },
+      {
+        "question": "how much water does it take to make pecan",
+        "status": "ANSWERED",
+        "pipelineMs": 71.27579999999944
+      },
+      {
+        "question": "how many arlo cameras can i add",
+        "status": "ANSWERED",
+        "pipelineMs": 71.21380000000136
+      },
+      {
+        "question": "how far is michigan international speedway",
+        "status": "ANSWERED",
+        "pipelineMs": 71.1472999999969
+      },
+      {
+        "question": "how after should a per trip be inspected be conducted",
+        "status": "ANSWERED",
+        "pipelineMs": 71.12380000000121
+      },
+      {
+        "question": "biggest origami in the world",
+        "status": "ANSWERED",
+        "pipelineMs": 71.09690000000046
+      },
+      {
+        "question": "federal contractor definition",
+        "status": "ANSWERED",
+        "pipelineMs": 71.07850000000326
+      },
+      {
+        "question": "how many years in college to get an mba",
+        "status": "ANSWERED",
+        "pipelineMs": 71.0180999999975
+      },
+      {
+        "question": "galantine definition",
+        "status": "ANSWERED",
+        "pipelineMs": 70.92480000000069
+      },
+      {
+        "question": "how much should a toyota prius headlight cost",
+        "status": "ANSWERED",
+        "pipelineMs": 70.83510000000024
+      },
+      {
+        "question": "do ingrown toenails go away on their own",
+        "status": "ANSWERED",
+        "pipelineMs": 70.70529999999962
+      },
+      {
+        "question": "does delta fly to bangalore",
+        "status": "ANSWERED",
+        "pipelineMs": 70.69700000000057
+      },
+      {
+        "question": "dr who, shirley bessie",
+        "status": "ABSTAINED",
+        "pipelineMs": 70.69090000000142
+      },
+      {
+        "question": "another word for light of my life",
+        "status": "ABSTAINED",
+        "pipelineMs": 70.5963000000047
+      },
+      {
+        "question": "does conviction mean jail",
+        "status": "ANSWERED",
+        "pipelineMs": 70.4372000000003
+      },
+      {
+        "question": "average price of electricity on a campsite",
+        "status": "ABSTAINED",
+        "pipelineMs": 70.39730000000236
+      },
+      {
+        "question": "what is bcp mode",
+        "status": "ANSWERED",
+        "pipelineMs": 70.30749999999898
+      },
+      {
+        "question": "accuracy definition math term",
+        "status": "ANSWERED",
+        "pipelineMs": 70.244200000001
+      },
+      {
+        "question": "supramundane meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 70.24349999999686
+      },
+      {
+        "question": "how does nhl playoff seeding work",
+        "status": "ANSWERED",
+        "pipelineMs": 70.21339999999964
+      },
+      {
+        "question": "how much weight does a stamp cover",
+        "status": "ANSWERED",
+        "pipelineMs": 70.19579999999951
+      },
+      {
+        "question": "how do i pit cherries",
+        "status": "ANSWERED",
+        "pipelineMs": 70.17160000000149
+      },
+      {
+        "question": "how old was gary cooper when he died",
+        "status": "ANSWERED",
+        "pipelineMs": 70.13539999999557
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 70.13509999999769
+      },
+      {
+        "question": "how long should it take to get your federal income tax refund check",
+        "status": "ANSWERED",
+        "pipelineMs": 70.11609999999928
+      },
+      {
+        "question": "company financials: explain current ratio",
+        "status": "ANSWERED",
+        "pipelineMs": 70.01919999999882
+      },
+      {
+        "question": "how did john eccles die",
+        "status": "ANSWERED",
+        "pipelineMs": 69.98660000000018
+      },
+      {
+        "question": "final step to solva a cube yellow cross",
+        "status": "ANSWERED",
+        "pipelineMs": 69.95900000000256
+      },
+      {
+        "question": "such a sap meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 69.95430000000124
+      },
+      {
+        "question": "how much does it cost to recement a crown",
+        "status": "ANSWERED",
+        "pipelineMs": 69.93549999999959
+      },
+      {
+        "question": "how far is philadelphia from lancaster pa",
+        "status": "ANSWERED",
+        "pipelineMs": 69.85850000000028
+      },
+      {
+        "question": "difference between nation and state and nation state",
+        "status": "ANSWERED",
+        "pipelineMs": 69.82129999999961
+      },
+      {
+        "question": "suppressed meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 69.79679999999644
+      },
+      {
+        "question": "average cost of college in 1980",
+        "status": "ANSWERED",
+        "pipelineMs": 69.76300000000083
+      },
+      {
+        "question": "hipaa compliant file storage",
+        "status": "ANSWERED",
+        "pipelineMs": 69.54330000000118
+      },
+      {
+        "question": "do i need to uninstall old microsoft office",
+        "status": "ANSWERED",
+        "pipelineMs": 69.4819000000025
+      },
+      {
+        "question": "how to create a trial balance sheet",
+        "status": "ANSWERED",
+        "pipelineMs": 69.44930000000386
+      },
+      {
+        "question": "average salary of a office manager mortgage lending",
+        "status": "ANSWERED",
+        "pipelineMs": 69.41909999999734
+      },
+      {
+        "question": "how much vram in intel hd 3000",
+        "status": "ANSWERED",
+        "pipelineMs": 69.4162000000033
+      },
+      {
+        "question": "enu protein shake",
+        "status": "ANSWERED",
+        "pipelineMs": 69.29549999999654
+      },
+      {
+        "question": "how popular is hillary clinton",
+        "status": "ANSWERED",
+        "pipelineMs": 69.21349999999802
+      },
+      {
+        "question": "convert mils to grams per square meter",
+        "status": "ANSWERED",
+        "pipelineMs": 69.11659999999938
+      },
+      {
+        "question": "does medical marijuana help with ptsd",
+        "status": "ANSWERED",
+        "pipelineMs": 69.11299999999983
+      },
+      {
+        "question": "has floyd mayweather ever donated his winnings",
+        "status": "ANSWERED",
+        "pipelineMs": 69.07259999999951
+      },
+      {
+        "question": "average temp in the caribbean december",
+        "status": "ANSWERED",
+        "pipelineMs": 68.96889999999985
+      },
+      {
+        "question": "how is gallium extraction from bauxite",
+        "status": "ANSWERED",
+        "pipelineMs": 68.93080000000191
+      },
+      {
+        "question": "does inflatable neck traction work",
+        "status": "ANSWERED",
+        "pipelineMs": 68.89620000000286
+      },
+      {
+        "question": "how long between coolsculpting treatments",
+        "status": "ANSWERED",
+        "pipelineMs": 68.86959999999817
+      },
+      {
+        "question": "how many days are there for human beings?",
+        "status": "ANSWERED",
+        "pipelineMs": 68.86759999999776
+      },
+      {
+        "question": "subaru head gasket symptoms",
+        "status": "ANSWERED",
+        "pipelineMs": 68.76610000000164
+      },
+      {
+        "question": "sub slab definition",
+        "status": "ANSWERED",
+        "pipelineMs": 68.70080000000053
+      },
+      {
+        "question": "drinking lots of water can help lose weight",
+        "status": "ANSWERED",
+        "pipelineMs": 68.62190000000555
+      },
+      {
+        "question": "subsistence agriculture is characterized by agriculturalists who",
+        "status": "ANSWERED",
+        "pipelineMs": 68.59559999999874
+      },
+      {
+        "question": "how long can you annul a marriage",
+        "status": "ANSWERED",
+        "pipelineMs": 68.59490000000733
+      },
+      {
+        "question": "canceled check definition",
+        "status": "ANSWERED",
+        "pipelineMs": 68.52189999999882
+      },
+      {
+        "question": "sue desmond-hellmann salary",
+        "status": "ANSWERED",
+        "pipelineMs": 68.50029999999788
+      },
+      {
+        "question": "centurylink default gateway address",
+        "status": "ABSTAINED",
+        "pipelineMs": 68.46670000000086
+      },
+      {
+        "question": "how long does it take to become a pediatric orthopedic surgeon",
+        "status": "ANSWERED",
+        "pipelineMs": 68.46340000000419
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 68.4339
+      },
+      {
+        "question": "what is bay crest partners",
+        "status": "ANSWERED",
+        "pipelineMs": 68.39580000000205
+      },
+      {
+        "question": "how much does an animator get paid glassdoor",
+        "status": "ANSWERED",
+        "pipelineMs": 68.28829999999834
+      },
+      {
+        "question": "how to limit viewing angle of ipad",
+        "status": "ABSTAINED",
+        "pipelineMs": 68.24469999999928
+      },
+      {
+        "question": "define: throughput",
+        "status": "ANSWERED",
+        "pipelineMs": 68.23149999999987
+      },
+      {
+        "question": "How to make cheese feel better?",
+        "status": "ABSTAINED",
+        "pipelineMs": 68.175900000002
+      },
+      {
+        "question": "how many time zones are in the world?",
+        "status": "ANSWERED",
+        "pipelineMs": 68.15440000000126
+      },
+      {
+        "question": "what is basal in dna",
+        "status": "ANSWERED",
+        "pipelineMs": 68.06660000000102
+      },
+      {
+        "question": "what is bell's palsy related to",
+        "status": "ANSWERED",
+        "pipelineMs": 67.98530000000028
+      },
+      {
+        "question": "does spray deodorant work",
+        "status": "ANSWERED",
+        "pipelineMs": 67.96720000000096
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 67.80260000000044
+      },
+      {
+        "question": "how long does it take to replace counters",
+        "status": "ANSWERED",
+        "pipelineMs": 67.76259999999456
+      },
+      {
+        "question": "how to install a forced air unit",
+        "status": "ANSWERED",
+        "pipelineMs": 67.72259999999915
+      },
+      {
+        "question": "what is batman mansion name",
+        "status": "ABSTAINED",
+        "pipelineMs": 67.71990000000096
+      },
+      {
+        "question": "what is bbs in safety",
+        "status": "ANSWERED",
+        "pipelineMs": 67.71280000000115
+      },
+      {
+        "question": "how much supervisor pay rate for cvs warehouse",
+        "status": "ANSWERED",
+        "pipelineMs": 67.67039999999906
+      },
+      {
+        "question": "how long is zales layaway",
+        "status": "ANSWERED",
+        "pipelineMs": 67.63190000000077
+      },
+      {
+        "question": "how long before testosterone results",
+        "status": "ANSWERED",
+        "pipelineMs": 67.61639999999534
+      },
+      {
+        "question": "how long for cardio to burn fat",
+        "status": "ANSWERED",
+        "pipelineMs": 67.54490000000442
+      },
+      {
+        "question": "french translation for where is",
+        "status": "ANSWERED",
+        "pipelineMs": 67.51889999999912
+      },
+      {
+        "question": "sunoco price chopper locations",
+        "status": "ANSWERED",
+        "pipelineMs": 67.50740000000587
+      },
+      {
+        "question": "how long would i be obligated to sell damsel in defense",
+        "status": "ABSTAINED",
+        "pipelineMs": 67.4872000000014
+      },
+      {
+        "question": "how effective is boniva",
+        "status": "ANSWERED",
+        "pipelineMs": 67.37650000000122
+      },
+      {
+        "question": "do unearned revenue go income statement",
+        "status": "ANSWERED",
+        "pipelineMs": 67.37489999999525
+      },
+      {
+        "question": "does atorvastatin cause nightmares",
+        "status": "ANSWERED",
+        "pipelineMs": 67.27249999999913
+      },
+      {
+        "question": "what is benthos",
+        "status": "ANSWERED",
+        "pipelineMs": 67.17659999999887
+      },
+      {
+        "question": "summit define",
+        "status": "ANSWERED",
+        "pipelineMs": 67.14290000000256
+      },
+      {
+        "question": "succulent plant meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 67.14189999999871
+      },
+      {
+        "question": "cost basis for gifted security",
+        "status": "ANSWERED",
+        "pipelineMs": 67.07760000000235
+      },
+      {
+        "question": "sultry meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 67.06090000000404
+      },
+      {
+        "question": "struthers city school district state number",
+        "status": "ANSWERED",
+        "pipelineMs": 67.02539999999954
+      },
+      {
+        "question": "what is barometric pressure in lincoln ne now?",
+        "status": "ABSTAINED",
+        "pipelineMs": 67.00859999999966
+      },
+      {
+        "question": "how effective are sassy water",
+        "status": "ANSWERED",
+        "pipelineMs": 66.79989999999998
+      },
+      {
+        "question": "how to delete a",
+        "status": "ANSWERED",
+        "pipelineMs": 66.78360000000066
+      },
+      {
+        "question": "how to print an excel sheet",
+        "status": "ANSWERED",
+        "pipelineMs": 66.76469999999972
+      },
+      {
+        "question": "how long should you carb cycle",
+        "status": "ANSWERED",
+        "pipelineMs": 66.73239999999987
+      },
+      {
+        "question": "what is betts",
+        "status": "ANSWERED",
+        "pipelineMs": 66.60800000000017
+      },
+      {
+        "question": "guide to how to collect followers on wow",
+        "status": "ANSWERED",
+        "pipelineMs": 66.6048999999989
+      },
+      {
+        "question": "do women's periods sync",
+        "status": "ANSWERED",
+        "pipelineMs": 66.56299999999828
+      },
+      {
+        "question": "hotels in smithville, nj",
+        "status": "ANSWERED",
+        "pipelineMs": 66.51579999999376
+      },
+      {
+        "question": "what is behavioral event interviewing method",
+        "status": "ANSWERED",
+        "pipelineMs": 66.32890000000407
+      },
+      {
+        "question": "how does gothic sculpture differ from romanesque sculpture? how does the imagery differ?",
+        "status": "ANSWERED",
+        "pipelineMs": 66.2647999999972
+      },
+      {
+        "question": "can chia seeds be planted in house",
+        "status": "ANSWERED",
+        "pipelineMs": 66.12910000000193
+      },
+      {
+        "question": "definition   disability insurance",
+        "status": "ANSWERED",
+        "pipelineMs": 66.12379999999757
+      },
+      {
+        "question": "how much does hacc biology class cost",
+        "status": "ABSTAINED",
+        "pipelineMs": 66.11449999999968
+      },
+      {
+        "question": "giDa delauran net worth",
+        "status": "ABSTAINED",
+        "pipelineMs": 66.06389999999737
+      },
+      {
+        "question": "definition of primary care american academy of family physicians",
+        "status": "ANSWERED",
+        "pipelineMs": 66.0576000000001
+      },
+      {
+        "question": "how often should change your transmission fluid",
+        "status": "ANSWERED",
+        "pipelineMs": 66.01950000000579
+      },
+      {
+        "question": "how does pollution increase human population",
+        "status": "ANSWERED",
+        "pipelineMs": 65.82960000000003
+      },
+      {
+        "question": "how to install a oem sub and box into a dodge ram without factory sub",
+        "status": "ANSWERED",
+        "pipelineMs": 65.78400000000693
+      },
+      {
+        "question": "california domestic violence leave laws",
+        "status": "ANSWERED",
+        "pipelineMs": 65.70299999999952
+      },
+      {
+        "question": "how long to microwave an ear of corn?",
+        "status": "ANSWERED",
+        "pipelineMs": 65.57810000000063
+      },
+      {
+        "question": "hoath name",
+        "status": "ANSWERED",
+        "pipelineMs": 65.4745000000039
+      },
+      {
+        "question": "how do you freeze fresh vegetables?",
+        "status": "ANSWERED",
+        "pipelineMs": 65.39650000000074
+      },
+      {
+        "question": "do interns get paid",
+        "status": "ANSWERED",
+        "pipelineMs": 65.36259999999311
+      },
+      {
+        "question": "supermarket meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 65.3243999999977
+      },
+      {
+        "question": "how many gallon fuel tank requires hazmat",
+        "status": "ABSTAINED",
+        "pipelineMs": 65.30759999999646
+      },
+      {
+        "question": "benefits of moringa ginger tea",
+        "status": "ANSWERED",
+        "pipelineMs": 65.22749999999724
+      },
+      {
+        "question": "how much radiation full set dentist",
+        "status": "ANSWERED",
+        "pipelineMs": 65.19030000000203
+      },
+      {
+        "question": "how much water can a running toilet waste",
+        "status": "ANSWERED",
+        "pipelineMs": 65.0826999999972
+      },
+      {
+        "question": "dodd provider billing training",
+        "status": "ANSWERED",
+        "pipelineMs": 65.01619999999821
+      },
+      {
+        "question": "distance scottsdale to grand canyon",
+        "status": "ANSWERED",
+        "pipelineMs": 64.83829999999944
+      },
+      {
+        "question": "dish stock price yahoo",
+        "status": "ANSWERED",
+        "pipelineMs": 64.81340000000273
+      },
+      {
+        "question": "distance between china and australia",
+        "status": "ANSWERED",
+        "pipelineMs": 64.52360000000044
+      },
+      {
+        "question": "what is batti",
+        "status": "ANSWERED",
+        "pipelineMs": 64.49679999999898
+      },
+      {
+        "question": "how much money did louis xiv spend on versailles",
+        "status": "ANSWERED",
+        "pipelineMs": 64.33780000000479
+      },
+      {
+        "question": "did roblox have a power ranger event",
+        "status": "ABSTAINED",
+        "pipelineMs": 64.29370000000063
+      },
+      {
+        "question": "foods that enhance appetite",
+        "status": "ANSWERED",
+        "pipelineMs": 64.28939999999784
+      },
+      {
+        "question": "why did rachel carson write an obligation to endure",
+        "status": "ANSWERED",
+        "pipelineMs": 64.25260000000071
+      },
+      {
+        "question": "how old is myra summers",
+        "status": "ANSWERED",
+        "pipelineMs": 64.2416000000012
+      },
+      {
+        "question": "first defense nasal filter sales numbers",
+        "status": "ANSWERED",
+        "pipelineMs": 64.21019999999999
+      },
+      {
+        "question": "excited define",
+        "status": "ANSWERED",
+        "pipelineMs": 64.19860000000153
+      },
+      {
+        "question": "how much do first responders make",
+        "status": "ANSWERED",
+        "pipelineMs": 64.1926999999996
+      },
+      {
+        "question": "define slimy",
+        "status": "ANSWERED",
+        "pipelineMs": 64.15419999999722
+      },
+      {
+        "question": "define routine activity",
+        "status": "ANSWERED",
+        "pipelineMs": 64.15090000000055
+      },
+      {
+        "question": "what is barter system and its problems",
+        "status": "ANSWERED",
+        "pipelineMs": 64.09400000000005
+      },
+      {
+        "question": "study of climate weather",
+        "status": "ANSWERED",
+        "pipelineMs": 63.735100000001694
+      },
+      {
+        "question": "harrison ford's son liam",
+        "status": "ANSWERED",
+        "pipelineMs": 63.408299999999144
+      },
+      {
+        "question": "how to get clear desktop icon on windows 8",
+        "status": "ANSWERED",
+        "pipelineMs": 63.341700000000856
+      },
+      {
+        "question": "how long for cantaloupe to mature",
+        "status": "ANSWERED",
+        "pipelineMs": 63.33239999999978
+      },
+      {
+        "question": "how common is bleeding during pregnancy",
+        "status": "ANSWERED",
+        "pipelineMs": 63.20640000000094
+      },
+      {
+        "question": "hot zone definition disease",
+        "status": "ANSWERED",
+        "pipelineMs": 62.93409999999494
+      },
+      {
+        "question": "can an unmarried man adopt a woman legally",
+        "status": "ABSTAINED",
+        "pipelineMs": 62.806000000000495
+      },
+      {
+        "question": "hotels in livingston, tx",
+        "status": "ANSWERED",
+        "pipelineMs": 62.69640000000072
+      },
+      {
+        "question": "culture of sociology definition",
+        "status": "ANSWERED",
+        "pipelineMs": 62.17780000000039
+      },
+      {
+        "question": "how many round trip miles from 70663 to nashville, tn",
+        "status": "ANSWERED",
+        "pipelineMs": 62.05140000000392
+      },
+      {
+        "question": "how many chromosomes do human offspring",
+        "status": "ANSWERED",
+        "pipelineMs": 61.9987000000001
+      },
+      {
+        "question": "can a signed stipulation be overturned",
+        "status": "ANSWERED",
+        "pipelineMs": 61.99549999999908
+      },
+      {
+        "question": "how many subway franchises are in the us",
+        "status": "ANSWERED",
+        "pipelineMs": 61.885700000002544
+      },
+      {
+        "question": "bottom front of a cargo ship",
+        "status": "ABSTAINED",
+        "pipelineMs": 61.856299999999464
+      },
+      {
+        "question": "subsite definition",
+        "status": "ANSWERED",
+        "pipelineMs": 61.72780000000239
+      },
+      {
+        "question": "how long is shoulder recovery",
+        "status": "ANSWERED",
+        "pipelineMs": 61.339100000000144
+      },
+      {
+        "question": ". what is a corporation?",
+        "status": "ANSWERED",
+        "pipelineMs": 60.975500000000466
+      },
+      {
+        "question": "foods to eat when throwing up",
+        "status": "ANSWERED",
+        "pipelineMs": 60.92890000000625
+      },
+      {
+        "question": "how many ham radio operators in the usa",
+        "status": "ANSWERED",
+        "pipelineMs": 60.79529999999795
+      },
+      {
+        "question": "does filth cause ringworm?",
+        "status": "ABSTAINED",
+        "pipelineMs": 60.53619999999955
+      },
+      {
+        "question": "aast mba",
+        "status": "ANSWERED",
+        "pipelineMs": 60.41020000000208
+      },
+      {
+        "question": "age of mac davis",
+        "status": "ANSWERED",
+        "pipelineMs": 60.38680000000022
+      },
+      {
+        "question": "california narcotic laws",
+        "status": "ANSWERED",
+        "pipelineMs": 60.16200000000026
+      },
+      {
+        "question": "define workday",
+        "status": "ANSWERED",
+        "pipelineMs": 60.02400000000034
+      },
+      {
+        "question": "chart for foods low in potassium.",
+        "status": "ANSWERED",
+        "pipelineMs": 59.264500000001135
+      },
+      {
+        "question": "how is testosterone checked",
+        "status": "ANSWERED",
+        "pipelineMs": 58.73439999999937
+      },
+      {
+        "question": "curtain hooks types",
+        "status": "ANSWERED",
+        "pipelineMs": 57.829100000002654
+      },
+      {
+        "question": "cost to replace converter with test pipe",
+        "status": "ANSWERED",
+        "pipelineMs": 57.48540000000048
+      },
+      {
+        "question": "documents breach definition",
+        "status": "ANSWERED",
+        "pipelineMs": 57.46099999999933
+      },
+      {
+        "question": "companies that sell vehicle designs",
+        "status": "ANSWERED",
+        "pipelineMs": 57.153299999998126
+      },
+      {
+        "question": "curb event center",
+        "status": "ANSWERED",
+        "pipelineMs": 56.5033999999996
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 56.117200000000594
+      },
+      {
+        "question": "how old is alaine",
+        "status": "ANSWERED",
+        "pipelineMs": 55.99660000000222
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 55.58009999999922
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 55.117200000000594
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 55.086700000003475
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 54.86769999999888
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 54.74019999999928
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 54.438500000000204
+      },
+      {
+        "question": "what is barrel o slime?",
+        "status": "ANSWERED",
+        "pipelineMs": 53.88400000000047
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 53.66540000000168
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 53.65390000000116
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 53.428500000001804
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 53.370600000002014
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 53.267699999996694
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 53.06570000000056
+      },
+      {
+        "question": "honesty or integrity definition",
+        "status": "ANSWERED",
+        "pipelineMs": 52.93949999999995
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 52.60500000000047
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 51.50180000000182
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 51.31930000000102
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 50.71740000000136
+      },
+      {
+        "question": "how many ongoing trump administration investigations",
+        "status": "ANSWERED",
+        "pipelineMs": 50.589300000000094
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 50.58420000000115
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 50.54329999999936
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 50.33950000000186
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 49.92029999999795
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 49.48500000000422
+      },
+      {
+        "question": "defination arbitrary",
+        "status": "ABSTAINED",
+        "pipelineMs": 48.27089999999953
+      },
+      {
+        "question": "can recycling on 17m",
+        "status": "ABSTAINED",
+        "pipelineMs": 44.51260000000548
+      },
+      {
+        "question": "how many mbs in a gig",
+        "status": "ABSTAINED",
+        "pipelineMs": 42.6417999999976
+      }
+    ]
+  },
+  "retrieval": [
+    {
+      "label": "all strategies (shipped)",
+      "recall1": 0.368,
+      "recall5": 0.82,
+      "recall10": 0.976,
+      "mrr": 0.5323095238095239,
+      "answerF1": 0.33020196782050437
+    },
+    {
+      "label": "only passage",
+      "recall1": 0.356,
+      "recall5": 0.804,
+      "recall10": 0.972,
+      "mrr": 0.5224793650793651,
+      "answerF1": 0.32817635111506704
+    },
+    {
+      "label": "only fixed",
+      "recall1": 0.34,
+      "recall5": 0.808,
+      "recall10": 0.972,
+      "mrr": 0.5120460317460317,
+      "answerF1": 0.326381470320902
+    },
+    {
+      "label": "only sentence_window",
+      "recall1": 0.412,
+      "recall5": 0.848,
+      "recall10": 0.976,
+      "mrr": 0.568515873015873,
+      "answerF1": 0.32232429737640955
+    },
+    {
+      "label": "only semantic",
+      "recall1": 0.368,
+      "recall5": 0.82,
+      "recall10": 0.968,
+      "mrr": 0.5380968253968252,
+      "answerF1": 0.3290901089043066
+    },
+    {
+      "label": "only structural",
+      "recall1": 0.332,
+      "recall5": 0.804,
+      "recall10": 0.972,
+      "mrr": 0.5088873015873016,
+      "answerF1": 0.32506364752057626
+    },
+    {
+      "label": "only proposition",
+      "recall1": 0.336,
+      "recall5": 0.812,
+      "recall10": 0.952,
+      "mrr": 0.508125396825397,
+      "answerF1": 0.3170614486125055
+    },
+    {
+      "label": "all, no cross-encoder",
+      "recall1": 0.324,
+      "recall5": 0.824,
+      "recall10": 0.964,
+      "mrr": 0.5162873015873017,
+      "answerF1": 0.2534913666505826
+    }
+  ],
+  "answers": {
+    "answeredRate": 0.968,
+    "f1All": 0.3257742237594895,
+    "f1Answered": 0.33654361958624945
+  },
+  "abstention": {
+    "current": {
+      "tp": 242,
+      "fp": 105,
+      "tn": 32,
+      "fn": 8,
+      "precision": 0.6974063400576369,
+      "recall": 0.968,
+      "f1": 0.8107202680067003,
+      "byPopulation": {
+        "answerable": {
+          "answered": 242,
+          "total": 250
+        },
+        "no-answer-label": {
+          "answered": 105,
+          "total": 125
+        },
+        "off-corpus": {
+          "answered": 0,
+          "total": 12
+        }
+      }
+    },
+    "best": {
+      "thresholds": {
+        "outOfCorpusCross": -11,
+        "weakCross": -6,
+        "outOfCorpusDense": 0.34,
+        "outOfCorpusLexical": 0.45,
+        "weakDense": 0.42,
+        "weakMargin": 0.035,
+        "minAnswerCoverage": 0,
+        "minAnswerConfidence": 0,
+        "minAnswerLogit": 1
+      },
+      "tp": 242,
+      "fp": 105,
+      "tn": 32,
+      "fn": 8,
+      "precision": 0.6974063400576369,
+      "recall": 0.968,
+      "f1": 0.8107202680067003,
+      "byPopulation": {
+        "answerable": {
+          "answered": 242,
+          "total": 250
+        },
+        "no-answer-label": {
+          "answered": 105,
+          "total": 125
+        },
+        "off-corpus": {
+          "answered": 0,
+          "total": 12
+        }
+      }
+    },
+    "sweep": [
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": 0,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": 0,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": 0,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      }
+    ]
+  }
+}

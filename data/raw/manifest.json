@@ -1,0 +1,26 @@
+{
+  "source": "ai4bharat/MSMARCO-XI (validation split)",
+  "fetchedAt": "2026-08-13T19:12:08.487Z",
+  "primaryLanguage": "hin",
+  "extraLanguages": [
+    "tam",
+    "ben",
+    "mar"
+  ],
+  "queries": 1200,
+  "answerable": 680,
+  "unanswerable": 520,
+  "withGoldPassage": 680,
+  "passages": 11904,
+  "passageChars": 3802730,
+  "queryTypes": {
+    "DESCRIPTION": 779,
+    "NUMERIC": 332,
+    "ENTITY": 58,
+    "PERSON": 24,
+    "LOCATION": 7
+  },
+  "bytesTransferred": 65522000,
+  "datasetBytes": 55619599557,
+  "fractionOfDatasetTransferred": 0.0011780379672250577
+}

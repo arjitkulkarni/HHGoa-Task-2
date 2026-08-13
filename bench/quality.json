@@ -1,0 +1,852 @@
+{
+  "generatedAt": "2026-08-13T20:28:38.728Z",
+  "index": {
+    "version": 1,
+    "builtAt": "2026-08-13T20:10:54.206Z",
+    "model": "Xenova/all-MiniLM-L6-v2",
+    "dims": 384,
+    "passageCount": 11904,
+    "chunkCount": 78342,
+    "strategyCounts": {
+      "PASSAGE": 11904,
+      "FIXED": 12462,
+      "SENTENCE_WINDOW": 35105,
+      "SEMANTIC": 24078,
+      "STRUCTURAL": 12907,
+      "PROPOSITION": 33706
+    },
+    "strategyProposed": {
+      "PASSAGE": 11904,
+      "FIXED": 12462,
+      "SENTENCE_WINDOW": 35105,
+      "SEMANTIC": 24078,
+      "STRUCTURAL": 12907,
+      "PROPOSITION": 33706
+    },
+    "source": "ai4bharat/MSMARCO-XI validation split",
+    "buildSeconds": 380.474,
+    "bytes": {
+      "passages": 13940350,
+      "chunks": 1566840,
+      "binary": 3760416,
+      "int8": 30083328,
+      "total": 49350934
+    }
+  },
+  "indexLoadMs": 216.10060000000001,
+  "node": "v24.14.0",
+  "platform": "win32-x64",
+  "cpu": "AMD Ryzen 9 8940HX with Radeon Graphics        ",
+  "retrieval": [
+    {
+      "label": "all strategies (shipped)",
+      "recall1": 0.368,
+      "recall5": 0.82,
+      "recall10": 0.976,
+      "mrr": 0.5323095238095239,
+      "answerF1": 0.33020196782050437
+    },
+    {
+      "label": "only passage",
+      "recall1": 0.356,
+      "recall5": 0.804,
+      "recall10": 0.972,
+      "mrr": 0.5224793650793651,
+      "answerF1": 0.32817635111506704
+    },
+    {
+      "label": "only fixed",
+      "recall1": 0.34,
+      "recall5": 0.808,
+      "recall10": 0.972,
+      "mrr": 0.5120460317460317,
+      "answerF1": 0.326381470320902
+    },
+    {
+      "label": "only sentence_window",
+      "recall1": 0.412,
+      "recall5": 0.848,
+      "recall10": 0.976,
+      "mrr": 0.568515873015873,
+      "answerF1": 0.32232429737640955
+    },
+    {
+      "label": "only semantic",
+      "recall1": 0.368,
+      "recall5": 0.82,
+      "recall10": 0.968,
+      "mrr": 0.5380968253968252,
+      "answerF1": 0.3290901089043066
+    },
+    {
+      "label": "only structural",
+      "recall1": 0.332,
+      "recall5": 0.804,
+      "recall10": 0.972,
+      "mrr": 0.5088873015873016,
+      "answerF1": 0.32506364752057626
+    },
+    {
+      "label": "only proposition",
+      "recall1": 0.336,
+      "recall5": 0.812,
+      "recall10": 0.952,
+      "mrr": 0.508125396825397,
+      "answerF1": 0.3170614486125055
+    },
+    {
+      "label": "all, no cross-encoder",
+      "recall1": 0.324,
+      "recall5": 0.824,
+      "recall10": 0.964,
+      "mrr": 0.5162873015873017,
+      "answerF1": 0.2534913666505826
+    }
+  ],
+  "answers": {
+    "answeredRate": 0.968,
+    "f1All": 0.3257742237594895,
+    "f1Answered": 0.33654361958624945
+  },
+  "abstention": {
+    "current": {
+      "tp": 242,
+      "fp": 105,
+      "tn": 32,
+      "fn": 8,
+      "precision": 0.6974063400576369,
+      "recall": 0.968,
+      "f1": 0.8107202680067003,
+      "byPopulation": {
+        "answerable": {
+          "answered": 242,
+          "total": 250
+        },
+        "no-answer-label": {
+          "answered": 105,
+          "total": 125
+        },
+        "off-corpus": {
+          "answered": 0,
+          "total": 12
+        }
+      }
+    },
+    "best": {
+      "thresholds": {
+        "outOfCorpusCross": -11,
+        "weakCross": -6,
+        "outOfCorpusDense": 0.34,
+        "outOfCorpusLexical": 0.45,
+        "weakDense": 0.42,
+        "weakMargin": 0.035,
+        "minAnswerCoverage": 0,
+        "minAnswerConfidence": 0,
+        "minAnswerLogit": 1
+      },
+      "tp": 242,
+      "fp": 105,
+      "tn": 32,
+      "fn": 8,
+      "precision": 0.6974063400576369,
+      "recall": 0.968,
+      "f1": 0.8107202680067003,
+      "byPopulation": {
+        "answerable": {
+          "answered": 242,
+          "total": 250
+        },
+        "no-answer-label": {
+          "answered": 105,
+          "total": 125
+        },
+        "off-corpus": {
+          "answered": 0,
+          "total": 12
+        }
+      }
+    },
+    "sweep": [
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": 0,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": 0,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -11,
+          "weakCross": 0,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -6,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -4,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.3,
+          "minAnswerConfidence": 0.3,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0,
+          "minAnswerConfidence": 0,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      },
+      {
+        "thresholds": {
+          "outOfCorpusCross": -9,
+          "weakCross": -2,
+          "outOfCorpusDense": 0.34,
+          "outOfCorpusLexical": 0.45,
+          "weakDense": 0.42,
+          "weakMargin": 0.035,
+          "minAnswerCoverage": 0.2,
+          "minAnswerConfidence": 0.2,
+          "minAnswerLogit": 1
+        },
+        "tp": 242,
+        "fp": 105,
+        "tn": 32,
+        "fn": 8,
+        "precision": 0.6974063400576369,
+        "recall": 0.968,
+        "f1": 0.8107202680067003,
+        "byPopulation": {
+          "answerable": {
+            "answered": 242,
+            "total": 250
+          },
+          "no-answer-label": {
+            "answered": 105,
+            "total": 125
+          },
+          "off-corpus": {
+            "answered": 0,
+            "total": 12
+          }
+        }
+      }
+    ]
+  }
+}

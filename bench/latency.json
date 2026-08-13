@@ -1,0 +1,1176 @@
+{
+  "generatedAt": "2026-08-13T19:51:31.412Z",
+  "index": {
+    "version": 1,
+    "builtAt": "2026-08-13T19:29:35.896Z",
+    "model": "Xenova/all-MiniLM-L6-v2",
+    "dims": 384,
+    "passageCount": 11904,
+    "chunkCount": 78342,
+    "strategyCounts": {
+      "PASSAGE": 11904,
+      "FIXED": 12462,
+      "SENTENCE_WINDOW": 35105,
+      "SEMANTIC": 24078,
+      "STRUCTURAL": 12907,
+      "PROPOSITION": 33706
+    },
+    "strategyProposed": {
+      "PASSAGE": 11904,
+      "FIXED": 12462,
+      "SENTENCE_WINDOW": 35105,
+      "SEMANTIC": 24078,
+      "STRUCTURAL": 12907,
+      "PROPOSITION": 33706
+    },
+    "source": "ai4bharat/MSMARCO-XI validation split",
+    "buildSeconds": 340.379,
+    "bytes": {
+      "passages": 13940350,
+      "chunks": 1566840,
+      "binary": 3760416,
+      "int8": 30083328,
+      "total": 49350934
+    }
+  },
+  "indexLoadMs": 305.3626,
+  "node": "v24.14.0",
+  "platform": "win32-x64",
+  "cpu": "AMD Ryzen 9 8940HX with Radeon Graphics        ",
+  "latency": {
+    "total": {
+      "n": 200,
+      "mean": 72.08963899999992,
+      "p50": 70.50440000000162,
+      "p70": 77.60580000000027,
+      "p90": 90.20590000000038,
+      "p95": 95.3696000000009,
+      "p99": 110.19519999999648,
+      "p100": 130.2579999999989
+    },
+    "perStage": {
+      "guard.input": {
+        "n": 200,
+        "mean": 0.021126999999921736,
+        "p50": 0.018900000000940054,
+        "p70": 0.021199999999225838,
+        "p90": 0.028399999999692227,
+        "p95": 0.03809999999975844,
+        "p99": 0.04830000000220025,
+        "p100": 0.06330000000070868
+      },
+      "retrieve.embed": {
+        "n": 200,
+        "mean": 4.175093000000088,
+        "p50": 3.5711999999994077,
+        "p70": 4.502300000000105,
+        "p90": 6.464500000000044,
+        "p95": 7.000500000000102,
+        "p99": 8.716200000000754,
+        "p100": 13.156300000000556
+      },
+      "retrieve.dense": {
+        "n": 200,
+        "mean": 9.562217000000064,
+        "p50": 8.795400000000882,
+        "p70": 9.939000000000306,
+        "p90": 12.382700000000114,
+        "p95": 13.39759999999933,
+        "p99": 17.855599999999868,
+        "p100": 19.934399999999187
+      },
+      "retrieve.lexical": {
+        "n": 200,
+        "mean": 1.7918544999999677,
+        "p50": 1.6147999999993772,
+        "p70": 1.932699999999386,
+        "p90": 2.576000000000022,
+        "p95": 3.272899999999936,
+        "p99": 4.586100000000442,
+        "p100": 5.3276999999998225
+      },
+      "retrieve.features": {
+        "n": 200,
+        "mean": 1.565064000000027,
+        "p50": 1.3971999999994296,
+        "p70": 1.7219999999997526,
+        "p90": 2.5389000000000124,
+        "p95": 3.0203999999994267,
+        "p99": 4.212499999997817,
+        "p100": 4.953700000000026
+      },
+      "retrieve.cross": {
+        "n": 200,
+        "mean": 53.58541000000007,
+        "p50": 51.77299999999923,
+        "p70": 57.66830000000027,
+        "p90": 69.98320000000012,
+        "p95": 72.89350000000013,
+        "p99": 84.19850000000042,
+        "p100": 110.67889999999989
+      },
+      "retrieve.mmr": {
+        "n": 200,
+        "mean": 0.9905990000000406,
+        "p50": 0.9938999999994849,
+        "p70": 1.0379000000011729,
+        "p90": 1.133299999999963,
+        "p95": 1.227100000000064,
+        "p99": 1.5484000000005835,
+        "p100": 1.6415999999999258
+      },
+      "retrieve": {
+        "n": 200,
+        "mean": 71.81522099999998,
+        "p50": 70.19890000000123,
+        "p70": 77.27510000000075,
+        "p90": 89.73489999999993,
+        "p95": 94.98829999999998,
+        "p99": 109.67789999999877,
+        "p100": 129.58200000000033
+      },
+      "guard.retrieval": {
+        "n": 200,
+        "mean": 0.005004500000088683,
+        "p50": 0.003999999998995918,
+        "p70": 0.004500000000007276,
+        "p90": 0.006400000000212458,
+        "p95": 0.009000000000014552,
+        "p99": 0.0253999999986263,
+        "p100": 0.05480000000079599
+      },
+      "answer.extract": {
+        "n": 175,
+        "mean": 0.24385199999998544,
+        "p50": 0.22110000000066066,
+        "p70": 0.26850000000013097,
+        "p90": 0.3805000000029395,
+        "p95": 0.4315999999998894,
+        "p99": 0.5270999999993364,
+        "p100": 0.542699999999968
+      },
+      "guard.answer": {
+        "n": 175,
+        "mean": 0.0017274285713522529,
+        "p50": 0.0014000000001033186,
+        "p70": 0.0016000000005078618,
+        "p90": 0.0021999999989930075,
+        "p95": 0.002800000000206637,
+        "p99": 0.016399999998611747,
+        "p100": 0.016800000001239823
+      },
+      "guard.grounding": {
+        "n": 173,
+        "mean": 0.03861791907511991,
+        "p50": 0.034099999999853026,
+        "p70": 0.0419000000001688,
+        "p90": 0.06259999999929278,
+        "p95": 0.07790000000022701,
+        "p99": 0.12160000000039872,
+        "p100": 0.1248000000000502
+      }
+    },
+    "records": [
+      {
+        "question": "how many kw do solar city panels produce",
+        "status": "ANSWERED",
+        "pipelineMs": 130.2579999999989
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 112.41789999999946
+      },
+      {
+        "question": "causes of false negative pregnancy test",
+        "status": "ANSWERED",
+        "pipelineMs": 110.19519999999648
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 107.70869999999923
+      },
+      {
+        "question": "guide to how to collect followers on wow",
+        "status": "ANSWERED",
+        "pipelineMs": 103.24110000000064
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 102.4315000000006
+      },
+      {
+        "question": "how to print an excel sheet",
+        "status": "ANSWERED",
+        "pipelineMs": 97.46720000000005
+      },
+      {
+        "question": "death head units definition",
+        "status": "ANSWERED",
+        "pipelineMs": 96.85980000000018
+      },
+      {
+        "question": "borgata buffet price",
+        "status": "ANSWERED",
+        "pipelineMs": 96.00760000000082
+      },
+      {
+        "question": "how many calories in marshmallow salad with nuts",
+        "status": "ANSWERED",
+        "pipelineMs": 95.91369999999733
+      },
+      {
+        "question": "how to make an oil infused herbal infusion",
+        "status": "ANSWERED",
+        "pipelineMs": 95.3696000000009
+      },
+      {
+        "question": "do it yourself grout cleaning",
+        "status": "ANSWERED",
+        "pipelineMs": 95.27119999999923
+      },
+      {
+        "question": "how to deal with fear in your body",
+        "status": "ANSWERED",
+        "pipelineMs": 93.91190000000097
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 93.8268999999982
+      },
+      {
+        "question": "entropy of elements",
+        "status": "ANSWERED",
+        "pipelineMs": 93.46919999999955
+      },
+      {
+        "question": "does filth cause ringworm?",
+        "status": "ANSWERED",
+        "pipelineMs": 93.29890000000069
+      },
+      {
+        "question": "what is barometric pressure in lincoln ne now?",
+        "status": "ANSWERED",
+        "pipelineMs": 92.8364000000006
+      },
+      {
+        "question": "foods and supplements to lower blood sugar",
+        "status": "ANSWERED",
+        "pipelineMs": 92.47539999999935
+      },
+      {
+        "question": "does weightlifting reduce blood pressure for over 55s",
+        "status": "ANSWERED",
+        "pipelineMs": 90.37569999999687
+      },
+      {
+        "question": "stubhub toll free number",
+        "status": "ANSWERED",
+        "pipelineMs": 90.22540000000026
+      },
+      {
+        "question": "does medical marijuana help with ptsd",
+        "status": "ANSWERED",
+        "pipelineMs": 90.20590000000038
+      },
+      {
+        "question": "how to link misfit shine to iphone",
+        "status": "ANSWERED",
+        "pipelineMs": 90.03690000001006
+      },
+      {
+        "question": "court of two sisters brunch price",
+        "status": "ANSWERED",
+        "pipelineMs": 89.7527999999993
+      },
+      {
+        "question": "how much does it cost to recement a crown",
+        "status": "ANSWERED",
+        "pipelineMs": 89.15030000000115
+      },
+      {
+        "question": "how long does a physician have to sign an order for observation",
+        "status": "ANSWERED",
+        "pipelineMs": 88.9545999999973
+      },
+      {
+        "question": "how long is zales layaway",
+        "status": "ANSWERED",
+        "pipelineMs": 88.44710000000077
+      },
+      {
+        "question": "does delta fly to bangalore",
+        "status": "ANSWERED",
+        "pipelineMs": 87.84610000000066
+      },
+      {
+        "question": "how much is it per day when locked up in county jail",
+        "status": "ABSTAINED",
+        "pipelineMs": 87.14530000000195
+      },
+      {
+        "question": "how to make a trailer ramp",
+        "status": "ANSWERED",
+        "pipelineMs": 86.49990000000253
+      },
+      {
+        "question": "half cup how many ounces",
+        "status": "ANSWERED",
+        "pipelineMs": 86.31050000000232
+      },
+      {
+        "question": "how does pollution increase human population",
+        "status": "ANSWERED",
+        "pipelineMs": 85.49220000000105
+      },
+      {
+        "question": "how effective is boniva",
+        "status": "ANSWERED",
+        "pipelineMs": 85.45010000000093
+      },
+      {
+        "question": "how to cook flounder on the grill",
+        "status": "ANSWERED",
+        "pipelineMs": 85.44480000000112
+      },
+      {
+        "question": "average number of residents per apartment",
+        "status": "ANSWERED",
+        "pipelineMs": 85.33570000000327
+      },
+      {
+        "question": "age when teeth fall out",
+        "status": "ANSWERED",
+        "pipelineMs": 84.95869999999923
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 84.57070000000022
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 84.24219999999968
+      },
+      {
+        "question": "bottom front of a cargo ship",
+        "status": "ANSWERED",
+        "pipelineMs": 84.20309999999972
+      },
+      {
+        "question": "are corn meal and corn flour the same",
+        "status": "ANSWERED",
+        "pipelineMs": 84.16109999999935
+      },
+      {
+        "question": "calories in a small cucumber",
+        "status": "ANSWERED",
+        "pipelineMs": 83.96209999999883
+      },
+      {
+        "question": "how does nhl playoff seeding work",
+        "status": "ANSWERED",
+        "pipelineMs": 83.64229999999907
+      },
+      {
+        "question": "average weather in summer orlando",
+        "status": "ANSWERED",
+        "pipelineMs": 83.13659999999982
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 82.9399000000003
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 82.89340000000084
+      },
+      {
+        "question": "what is basal in dna",
+        "status": "ANSWERED",
+        "pipelineMs": 82.8632000000016
+      },
+      {
+        "question": "sty causes",
+        "status": "ANSWERED",
+        "pipelineMs": 82.68290000000161
+      },
+      {
+        "question": "struthers city school district state number",
+        "status": "ANSWERED",
+        "pipelineMs": 82.49339999999984
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 81.86050000000068
+      },
+      {
+        "question": "how long for cantaloupe to mature",
+        "status": "ANSWERED",
+        "pipelineMs": 81.59480000000076
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 81.52719999999863
+      },
+      {
+        "question": "what is barrel o slime?",
+        "status": "ANSWERED",
+        "pipelineMs": 80.8677000000007
+      },
+      {
+        "question": "average salary of a office manager mortgage lending",
+        "status": "ANSWERED",
+        "pipelineMs": 79.14849999999751
+      },
+      {
+        "question": "excited define",
+        "status": "ANSWERED",
+        "pipelineMs": 79.08389999999781
+      },
+      {
+        "question": "how many ounces of liquid is in one gallon",
+        "status": "ANSWERED",
+        "pipelineMs": 78.9879000000019
+      },
+      {
+        "question": "what is basic? uni",
+        "status": "ANSWERED",
+        "pipelineMs": 78.93040000000019
+      },
+      {
+        "question": "define radical neck",
+        "status": "ANSWERED",
+        "pipelineMs": 78.5032999999994
+      },
+      {
+        "question": "how do i find the mac on backberry",
+        "status": "ANSWERED",
+        "pipelineMs": 78.31079999999929
+      },
+      {
+        "question": "flights from chicago to ronald reagan airport",
+        "status": "ANSWERED",
+        "pipelineMs": 78.20380000000023
+      },
+      {
+        "question": "how do I configure the flux capacitor on a DeLorean DMC-12",
+        "status": "ABSTAINED",
+        "pipelineMs": 77.73009999999977
+      },
+      {
+        "question": "can a signed stipulation be overturned",
+        "status": "ANSWERED",
+        "pipelineMs": 77.6914999999999
+      },
+      {
+        "question": "how long should you carb cycle",
+        "status": "ANSWERED",
+        "pipelineMs": 77.60580000000027
+      },
+      {
+        "question": "how much do first responders make",
+        "status": "ANSWERED",
+        "pipelineMs": 77.5134999999973
+      },
+      {
+        "question": "culture of sociology definition",
+        "status": "ANSWERED",
+        "pipelineMs": 77.428600000002
+      },
+      {
+        "question": "how to get clear desktop icon on windows 8",
+        "status": "ANSWERED",
+        "pipelineMs": 76.90399999999954
+      },
+      {
+        "question": "first defense nasal filter sales numbers",
+        "status": "ANSWERED",
+        "pipelineMs": 76.60179999999946
+      },
+      {
+        "question": "subcortical band heterotopia symptoms",
+        "status": "ANSWERED",
+        "pipelineMs": 76.47039999999834
+      },
+      {
+        "question": "difference between gaap and ifrs bond issue costs",
+        "status": "ANSWERED",
+        "pipelineMs": 76.39199999999983
+      },
+      {
+        "question": "how to become a traveling physical therapist",
+        "status": "ANSWERED",
+        "pipelineMs": 76.25979999999618
+      },
+      {
+        "question": "does spray deodorant work",
+        "status": "ANSWERED",
+        "pipelineMs": 76.19650000000001
+      },
+      {
+        "question": "average size of college student housing",
+        "status": "ANSWERED",
+        "pipelineMs": 76.18519999999808
+      },
+      {
+        "question": "how much does an animator get paid glassdoor",
+        "status": "ANSWERED",
+        "pipelineMs": 76.07970000000023
+      },
+      {
+        "question": "highest record temperature for redding ca",
+        "status": "ANSWERED",
+        "pipelineMs": 75.88389999999981
+      },
+      {
+        "question": "how many ongoing trump administration investigations",
+        "status": "ANSWERED",
+        "pipelineMs": 75.83510000000024
+      },
+      {
+        "question": "can ear infections cause seizures in cats?",
+        "status": "ANSWERED",
+        "pipelineMs": 75.62199999999757
+      },
+      {
+        "question": "how long keep IRS records",
+        "status": "ANSWERED",
+        "pipelineMs": 75.19149999999536
+      },
+      {
+        "question": "how long would i be obligated to sell damsel in defense",
+        "status": "ANSWERED",
+        "pipelineMs": 75.18219999999747
+      },
+      {
+        "question": "do red delicious apples make good applesauce",
+        "status": "ANSWERED",
+        "pipelineMs": 75.09380000000056
+      },
+      {
+        "question": "army memorandum template fillable pdf",
+        "status": "ABSTAINED",
+        "pipelineMs": 74.77289999999812
+      },
+      {
+        "question": "calories calculator to lose weight for women",
+        "status": "ANSWERED",
+        "pipelineMs": 74.69710000000123
+      },
+      {
+        "question": "cosmology what is the dark ages",
+        "status": "ANSWERED",
+        "pipelineMs": 74.18189999999959
+      },
+      {
+        "question": "can stress crack on glass pane be remedied",
+        "status": "ANSWERED",
+        "pipelineMs": 73.57169999999951
+      },
+      {
+        "question": "define workday",
+        "status": "ANSWERED",
+        "pipelineMs": 73.3643000000011
+      },
+      {
+        "question": "why did rachel carson write an obligation to endure",
+        "status": "ANSWERED",
+        "pipelineMs": 73.32389999999941
+      },
+      {
+        "question": "how long does it take cracked ribs to heal",
+        "status": "ANSWERED",
+        "pipelineMs": 73.22890000000189
+      },
+      {
+        "question": "how do i pit cherries",
+        "status": "ANSWERED",
+        "pipelineMs": 73.15189999999893
+      },
+      {
+        "question": "can you reserve a site at eklutna campground",
+        "status": "ANSWERED",
+        "pipelineMs": 73.05769999999939
+      },
+      {
+        "question": ". what is a corporation?",
+        "status": "ANSWERED",
+        "pipelineMs": 72.7477000000008
+      },
+      {
+        "question": "chart for foods low in potassium.",
+        "status": "ANSWERED",
+        "pipelineMs": 72.60280000000012
+      },
+      {
+        "question": "study of climate weather",
+        "status": "ANSWERED",
+        "pipelineMs": 72.53359999999975
+      },
+      {
+        "question": "definition of excess land",
+        "status": "ANSWERED",
+        "pipelineMs": 72.33500000000095
+      },
+      {
+        "question": "biggest origami in the world",
+        "status": "ANSWERED",
+        "pipelineMs": 71.7530999999999
+      },
+      {
+        "question": "california domestic violence leave laws",
+        "status": "ANSWERED",
+        "pipelineMs": 71.74019999999837
+      },
+      {
+        "question": "how to make xcom 2 run smoother",
+        "status": "ANSWERED",
+        "pipelineMs": 71.67929999999797
+      },
+      {
+        "question": "average cost of college in 1980",
+        "status": "ANSWERED",
+        "pipelineMs": 71.18829999999798
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 71.13250000000153
+      },
+      {
+        "question": "how many requests per second does amazon get",
+        "status": "ANSWERED",
+        "pipelineMs": 71.04750000000058
+      },
+      {
+        "question": "how to see the most of the grand canyon during a visit",
+        "status": "ANSWERED",
+        "pipelineMs": 71.01460000000225
+      },
+      {
+        "question": "did roblox have a power ranger event",
+        "status": "ABSTAINED",
+        "pipelineMs": 70.93540000000121
+      },
+      {
+        "question": "does inflatable neck traction work",
+        "status": "ANSWERED",
+        "pipelineMs": 70.89719999999943
+      },
+      {
+        "question": "cost basis for gifted security",
+        "status": "ANSWERED",
+        "pipelineMs": 70.55329999999958
+      },
+      {
+        "question": "forensic evidence technician schooling",
+        "status": "ANSWERED",
+        "pipelineMs": 70.50440000000162
+      },
+      {
+        "question": "what is barter system and its problems",
+        "status": "ANSWERED",
+        "pipelineMs": 70.43109999999979
+      },
+      {
+        "question": "do people really have two hearts",
+        "status": "ANSWERED",
+        "pipelineMs": 70.2556999999997
+      },
+      {
+        "question": "honesty or integrity definition",
+        "status": "ANSWERED",
+        "pipelineMs": 70.14489999999978
+      },
+      {
+        "question": "defining cell in array",
+        "status": "ANSWERED",
+        "pipelineMs": 69.70689999999922
+      },
+      {
+        "question": "cost to replace converter with test pipe",
+        "status": "ANSWERED",
+        "pipelineMs": 69.67509999999947
+      },
+      {
+        "question": "what is bear in russian",
+        "status": "ANSWERED",
+        "pipelineMs": 69.55179999999746
+      },
+      {
+        "question": "definition of bandwidth in ict",
+        "status": "ANSWERED",
+        "pipelineMs": 69.45570000000225
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 68.78139999999894
+      },
+      {
+        "question": "what is bay crest partners",
+        "status": "ANSWERED",
+        "pipelineMs": 68.76319999999942
+      },
+      {
+        "question": "aldi australia opening hours",
+        "status": "ANSWERED",
+        "pipelineMs": 68.64999999999964
+      },
+      {
+        "question": "what is bbs in safety",
+        "status": "ANSWERED",
+        "pipelineMs": 68.55849999999737
+      },
+      {
+        "question": "galbraith name meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 67.9619999999959
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 67.74490000000151
+      },
+      {
+        "question": "how much vram in intel hd 3000",
+        "status": "ANSWERED",
+        "pipelineMs": 67.60440000000017
+      },
+      {
+        "question": "average price of electricity on a campsite",
+        "status": "ABSTAINED",
+        "pipelineMs": 67.26639999999679
+      },
+      {
+        "question": "how did john eccles die",
+        "status": "ANSWERED",
+        "pipelineMs": 67.26219999999921
+      },
+      {
+        "question": "cost of portable color tv videocon",
+        "status": "ANSWERED",
+        "pipelineMs": 67.16619999999966
+      },
+      {
+        "question": "how is gallium extraction from bauxite",
+        "status": "ANSWERED",
+        "pipelineMs": 67.05100000000311
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 66.87809999999808
+      },
+      {
+        "question": "cannot connect to citrix xenapp server",
+        "status": "ANSWERED",
+        "pipelineMs": 66.84329999999864
+      },
+      {
+        "question": "definition of primary care american academy of family physicians",
+        "status": "ANSWERED",
+        "pipelineMs": 66.60769999999866
+      },
+      {
+        "question": "how do i organise an event",
+        "status": "ANSWERED",
+        "pipelineMs": 66.08820000000014
+      },
+      {
+        "question": "how did erik erikson make changes to psychoanalytic theories",
+        "status": "ANSWERED",
+        "pipelineMs": 66.06350000000202
+      },
+      {
+        "question": "how do wifi tablets work",
+        "status": "ANSWERED",
+        "pipelineMs": 65.96590000000015
+      },
+      {
+        "question": "does soy have anything to do with constipation",
+        "status": "ANSWERED",
+        "pipelineMs": 65.64170000000013
+      },
+      {
+        "question": "can i open separate share and cash isas in one year",
+        "status": "ANSWERED",
+        "pipelineMs": 65.5555000000004
+      },
+      {
+        "question": "succulent plant meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 65.54169999999431
+      },
+      {
+        "question": "home remedies for pimples",
+        "status": "ANSWERED",
+        "pipelineMs": 65.5220999999965
+      },
+      {
+        "question": "what is bear payne's middle name",
+        "status": "ANSWERED",
+        "pipelineMs": 65.41150000000198
+      },
+      {
+        "question": "can a higher tsh level cause a negative pregnancy test",
+        "status": "ANSWERED",
+        "pipelineMs": 65.34389999999985
+      },
+      {
+        "question": "can you eat after botox",
+        "status": "ANSWERED",
+        "pipelineMs": 65.18490000000202
+      },
+      {
+        "question": "how much supervisor pay rate for cvs warehouse",
+        "status": "ANSWERED",
+        "pipelineMs": 65.11620000000039
+      },
+      {
+        "question": "what did my neighbour have for breakfast this morning",
+        "status": "ABSTAINED",
+        "pipelineMs": 65.04490000000078
+      },
+      {
+        "question": "french translation for where is",
+        "status": "ANSWERED",
+        "pipelineMs": 64.93969999999717
+      },
+      {
+        "question": "definition local disk",
+        "status": "ANSWERED",
+        "pipelineMs": 64.78789999999935
+      },
+      {
+        "question": "what is bcp mode",
+        "status": "ANSWERED",
+        "pipelineMs": 64.69100000000071
+      },
+      {
+        "question": "how old was chet atkins when he died?",
+        "status": "ANSWERED",
+        "pipelineMs": 64.32510000000002
+      },
+      {
+        "question": "what is batman mansion name",
+        "status": "ANSWERED",
+        "pipelineMs": 63.76799999999912
+      },
+      {
+        "question": "do ingrown toenails go away on their own",
+        "status": "ANSWERED",
+        "pipelineMs": 63.550999999999476
+      },
+      {
+        "question": "are vasectomies 100%",
+        "status": "ANSWERED",
+        "pipelineMs": 63.47869999999966
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 63.34990000000289
+      },
+      {
+        "question": "do you need a degree to be a gym teacher",
+        "status": "ANSWERED",
+        "pipelineMs": 63.003600000003644
+      },
+      {
+        "question": "giDa delauran net worth",
+        "status": "ANSWERED",
+        "pipelineMs": 62.66150000000016
+      },
+      {
+        "question": "chest pain upper right side feels like something is stuck there when i swallow",
+        "status": "ANSWERED",
+        "pipelineMs": 62.597899999998845
+      },
+      {
+        "question": "define slimy",
+        "status": "ANSWERED",
+        "pipelineMs": 62.47379999999794
+      },
+      {
+        "question": "definition of scoff",
+        "status": "ANSWERED",
+        "pipelineMs": 62.3815999999988
+      },
+      {
+        "question": "foods to help vitamin d",
+        "status": "ANSWERED",
+        "pipelineMs": 62.30320000000029
+      },
+      {
+        "question": "defination arbitrary",
+        "status": "ANSWERED",
+        "pipelineMs": 62.22389999999905
+      },
+      {
+        "question": "can japanese pokemon colosseum celebi be shiny",
+        "status": "ANSWERED",
+        "pipelineMs": 62.0449000000026
+      },
+      {
+        "question": "california narcotic laws",
+        "status": "ANSWERED",
+        "pipelineMs": 61.599600000001374
+      },
+      {
+        "question": "how much weight does a stamp cover",
+        "status": "ANSWERED",
+        "pipelineMs": 61.516499999998814
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 61.48939999999857
+      },
+      {
+        "question": "do indians eat rice",
+        "status": "ANSWERED",
+        "pipelineMs": 61.385299999999916
+      },
+      {
+        "question": "define: throughput",
+        "status": "ANSWERED",
+        "pipelineMs": 61.34690000000046
+      },
+      {
+        "question": "city of scottsdale recycling schedule",
+        "status": "ANSWERED",
+        "pipelineMs": 61.26890000000094
+      },
+      {
+        "question": "how old is joe scarborough",
+        "status": "ANSWERED",
+        "pipelineMs": 60.42269999999735
+      },
+      {
+        "question": "how can your checking account affect your credit score",
+        "status": "ANSWERED",
+        "pipelineMs": 60.23829999999907
+      },
+      {
+        "question": "how long to microwave an ear of corn?",
+        "status": "ANSWERED",
+        "pipelineMs": 59.73490000000129
+      },
+      {
+        "question": "what is bdops",
+        "status": "ANSWERED",
+        "pipelineMs": 59.73130000000128
+      },
+      {
+        "question": "which hotel should I book in Anjuna for the Hacker House residency",
+        "status": "ABSTAINED",
+        "pipelineMs": 59.51119999999901
+      },
+      {
+        "question": "cost to build a detached  garage",
+        "status": "ANSWERED",
+        "pipelineMs": 59.51080000000184
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 59.111000000000786
+      },
+      {
+        "question": "how common is bleeding during pregnancy",
+        "status": "ANSWERED",
+        "pipelineMs": 58.74200000000201
+      },
+      {
+        "question": "federal contractor definition",
+        "status": "ANSWERED",
+        "pipelineMs": 58.55039999999826
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 58.16259999999966
+      },
+      {
+        "question": "convert mils to grams per square meter",
+        "status": "ANSWERED",
+        "pipelineMs": 58.128600000000006
+      },
+      {
+        "question": "what will the Nifty 50 close at next Friday",
+        "status": "ABSTAINED",
+        "pipelineMs": 58.061499999999796
+      },
+      {
+        "question": "subsistence agriculture is characterized by agriculturalists who",
+        "status": "ANSWERED",
+        "pipelineMs": 57.86829999999827
+      },
+      {
+        "question": "sub slab definition",
+        "status": "ANSWERED",
+        "pipelineMs": 57.58089999999993
+      },
+      {
+        "question": "how far is philadelphia from lancaster pa",
+        "status": "ANSWERED",
+        "pipelineMs": 57.39730000000054
+      },
+      {
+        "question": "subaru head gasket symptoms",
+        "status": "ANSWERED",
+        "pipelineMs": 57.36540000000059
+      },
+      {
+        "question": "does conviction mean jail",
+        "status": "ANSWERED",
+        "pipelineMs": 57.23989999999867
+      },
+      {
+        "question": "how effective are sassy water",
+        "status": "ANSWERED",
+        "pipelineMs": 57.103699999996024
+      },
+      {
+        "question": "sue desmond-hellmann salary",
+        "status": "ANSWERED",
+        "pipelineMs": 56.77809999999954
+      },
+      {
+        "question": "how to delete a",
+        "status": "ANSWERED",
+        "pipelineMs": 56.758600000001024
+      },
+      {
+        "question": "such a sap meaning",
+        "status": "ANSWERED",
+        "pipelineMs": 56.56810000000405
+      },
+      {
+        "question": "define routine activity",
+        "status": "ANSWERED",
+        "pipelineMs": 56.24380000000019
+      },
+      {
+        "question": "hotels in livingston, tx",
+        "status": "ANSWERED",
+        "pipelineMs": 56.03570000000036
+      },
+      {
+        "question": "how to install a forced air unit",
+        "status": "ANSWERED",
+        "pipelineMs": 55.83339999999953
+      },
+      {
+        "question": "what is bce production usaf",
+        "status": "ABSTAINED",
+        "pipelineMs": 55.69120000000112
+      },
+      {
+        "question": "how old is myra summers",
+        "status": "ANSWERED",
+        "pipelineMs": 55.57760000000053
+      },
+      {
+        "question": "how much radiation full set dentist",
+        "status": "ANSWERED",
+        "pipelineMs": 55.542199999999866
+      },
+      {
+        "question": "how do you freeze fresh vegetables?",
+        "status": "ANSWERED",
+        "pipelineMs": 55.47060000000238
+      },
+      {
+        "question": "galantine definition",
+        "status": "ANSWERED",
+        "pipelineMs": 54.668400000000474
+      },
+      {
+        "question": "how much water can a running toilet waste",
+        "status": "ANSWERED",
+        "pipelineMs": 54.53900000000067
+      },
+      {
+        "question": "canceled check definition",
+        "status": "ANSWERED",
+        "pipelineMs": 53.9542999999976
+      },
+      {
+        "question": "how many ham radio operators in the usa",
+        "status": "ANSWERED",
+        "pipelineMs": 53.84490000000005
+      },
+      {
+        "question": "how much money did louis xiv spend on versailles",
+        "status": "ANSWERED",
+        "pipelineMs": 53.299800000002506
+      },
+      {
+        "question": "how many time zones are in the world?",
+        "status": "ANSWERED",
+        "pipelineMs": 53.297099999996135
+      },
+      {
+        "question": "distance scottsdale to grand canyon",
+        "status": "ANSWERED",
+        "pipelineMs": 52.77959999999803
+      },
+      {
+        "question": "subsite definition",
+        "status": "ANSWERED",
+        "pipelineMs": 52.71110000000044
+      },
+      {
+        "question": "average temp in the caribbean december",
+        "status": "ANSWERED",
+        "pipelineMs": 52.127800000001116
+      },
+      {
+        "question": "how is testosterone checked",
+        "status": "ANSWERED",
+        "pipelineMs": 52.07680000000073
+      },
+      {
+        "question": "what is batti",
+        "status": "ANSWERED",
+        "pipelineMs": 52.00690000000213
+      },
+      {
+        "question": "how many chromosomes do human offspring",
+        "status": "ANSWERED",
+        "pipelineMs": 51.725399999999354
+      },
+      {
+        "question": "aast mba",
+        "status": "ANSWERED",
+        "pipelineMs": 51.27340000000095
+      },
+      {
+        "question": "curtain hooks types",
+        "status": "ANSWERED",
+        "pipelineMs": 50.56579999999849
+      },
+      {
+        "question": "how long is shoulder recovery",
+        "status": "ANSWERED",
+        "pipelineMs": 50.11029999999846
+      },
+      {
+        "question": "curb event center",
+        "status": "ANSWERED",
+        "pipelineMs": 48.67380000000048
+      }
+    ]
+  }
+}
