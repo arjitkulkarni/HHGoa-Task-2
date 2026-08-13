@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "builtAt": "2026-08-13T20:10:54.206Z",
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "dims": 384,
+  "passageCount": 11904,
+  "chunkCount": 78342,
+  "strategyCounts": {
+    "PASSAGE": 11904,
+    "FIXED": 12462,
+    "SENTENCE_WINDOW": 35105,
+    "SEMANTIC": 24078,
+    "STRUCTURAL": 12907,
+    "PROPOSITION": 33706
+  },
+  "strategyProposed": {
+    "PASSAGE": 11904,
+    "FIXED": 12462,
+    "SENTENCE_WINDOW": 35105,
+    "SEMANTIC": 24078,
+    "STRUCTURAL": 12907,
+    "PROPOSITION": 33706
+  },
+  "source": "ai4bharat/MSMARCO-XI validation split",
+  "buildSeconds": 380.474,
+  "bytes": {
+    "passages": 13940350,
+    "chunks": 1566840,
+    "binary": 3760416,
+    "int8": 30083328,
+    "total": 49350934
+  }
+}
