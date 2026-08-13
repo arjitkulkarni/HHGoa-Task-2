@@ -1,0 +1,19 @@
+node_modules/
+.env
+.env.local
+.hf-cache/
+_probe/
+
+# Vendored third-party weights — regenerate with `npm run setup` (47 MB).
+models/
+
+# The passage text lives in data/index/passages.json; keeping a second copy in
+# the repo would double its size for nothing. queries.jsonl and manifest.json
+# are committed, because the benchmark and the UI examples need them.
+data/raw/passages.jsonl
+data/build.log
+data/*.tmp
+
+*.log
+.DS_Store
+Thumbs.db

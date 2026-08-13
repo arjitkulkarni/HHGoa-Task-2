@@ -1,0 +1,8 @@
+# Text is normalised to LF in the repository; the index artefacts are binary and
+# must never be touched by EOL conversion — a single byte change would
+# desynchronise the chunk offsets from the vectors.
+* text=auto eol=lf
+
+*.bin binary
+*.onnx binary
+data/index/*.bin binary

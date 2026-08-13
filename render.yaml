@@ -1,0 +1,23 @@
+# Render blueprint. `render deploy` or point a Render service at this repo.
+#
+# The pipeline is CPU-bound and single-process: the whole index is resident in
+# one Node heap, so this scales by adding instances, not threads. A 512 MB
+# instance is enough (measured RSS after warmup is ~420 MB); the starter plan
+# is specified because free instances sleep, and a sleeping instance turns the
+# demo's first request into a 30-second cold start.
+services:
+  - type: web
+    name: raga
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: singapore
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: SARVAM_API_KEY
+        sync: false # set in the Render dashboard; enables voice input
+      - key: ANTHROPIC_API_KEY
+        sync: false # optional; enables the off-budget LLM rewrite
+      - key: PORT
+        value: 8080

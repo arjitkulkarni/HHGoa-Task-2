@@ -1,0 +1,14 @@
+node_modules
+.git
+.github
+_probe
+.hf-cache
+models
+bench
+docs
+data/raw
+!data/raw/queries.jsonl
+data/build.log
+*.md
+.env
+.env.local

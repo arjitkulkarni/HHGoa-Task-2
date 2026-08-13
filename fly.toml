@@ -1,0 +1,35 @@
+# Fly.io alternative to render.yaml. `fly launch --no-deploy` then `fly deploy`.
+#
+# min_machines_running = 1 is the important line: the latency numbers in the
+# README are warm-process numbers, and a machine that scaled to zero would
+# serve a cold start to whoever opened the link first.
+app = "raga"
+primary_region = "bom"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  HOST = "0.0.0.0"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [http_service.http_options.response]
+    pristine = true
+
+  [[http_service.checks]]
+    grace_period = "40s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/api/health"
+
+[[vm]]
+  size = "shared-cpu-2x"
+  memory = "1gb"

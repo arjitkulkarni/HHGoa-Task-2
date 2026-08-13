@@ -1,0 +1,33 @@
+{
+  "name": "raga",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RAGA — a voice-enabled RAG pipeline over MSMARCO-XI. Sarvam speech-to-text, seven-strategy chunking, hybrid binary/int8 vector retrieval, a typed harness and grounding guardrails.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "setup": "node src/tools/fetch-model.ts",
+    "start": "node src/server/index.ts",
+    "dev": "node --watch src/server/index.ts",
+    "smoke": "node src/tools/smoke.ts",
+    "ingest": "node src/tools/ingest.ts",
+    "build:index": "node --max-old-space-size=2048 src/tools/build-index.ts",
+    "bench": "node --max-old-space-size=2048 src/tools/bench.ts",
+    "bench:quality": "node --max-old-space-size=2048 src/tools/bench.ts --quality",
+    "bench:all": "node --max-old-space-size=2048 src/tools/bench.ts --all",
+    "sweep": "node --max-old-space-size=2048 src/tools/sweep.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
+    "@huggingface/transformers": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "hyparquet": "^1.28.1",
+    "typescript": "^5.9.0"
+  }
+}
