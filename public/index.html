@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>RAGA — voice-enabled RAG over MSMARCO-XI</title>
+    <meta
+      name="description"
+      content="Speak a question in any of 13 Indic languages. Sarvam transcribes it, a six-strategy chunked index retrieves the evidence, and a grounded answer comes back in under 200 ms."
+    />
+    <meta name="theme-color" content="#0B6839" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B6839'/%3E%3Cpath d='M16 7a3.2 3.2 0 0 0-3.2 3.2v6a3.2 3.2 0 0 0 6.4 0v-6A3.2 3.2 0 0 0 16 7Z' fill='%23FEE101'/%3E%3Cpath d='M9 15v1.2a7 7 0 0 0 14 0V15' stroke='%23FEE101' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 23.2V26' stroke='%23FEE101' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead__brand">
+        <span class="wordmark">RAGA</span>
+        <span class="tagline">voice&#8202;→&#8202;retrieval&#8202;→&#8202;grounded answer</span>
+      </div>
+      <div class="masthead__meta" id="corpus-meta">
+        <span class="pill pill--muted">loading index…</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <!-- ── ask ─────────────────────────────────────────────────────── -->
+      <section class="panel panel--ask" aria-labelledby="ask-heading">
+        <h2 id="ask-heading" class="sr-only">Ask a question</h2>
+
+        <div class="ask">
+          <button
+            id="mic"
+            class="mic"
+            type="button"
+            aria-label="Hold to record your question"
+            data-state="idle"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="mic__glyph">
+              <path
+                d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"
+                fill="currentColor"
+              />
+              <path
+                d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="mic__ring" aria-hidden="true"></span>
+          </button>
+
+          <div class="ask__body">
+            <p class="mic__hint" id="mic-hint">Hold to speak — or type below</p>
+
+            <form id="ask-form" class="ask__form" autocomplete="off">
+              <input
+                id="question"
+                class="ask__input"
+                type="text"
+                name="question"
+                placeholder="what is a corporation"
+                maxlength="500"
+                aria-label="Type your question"
+              />
+              <button class="ask__submit" type="submit">Ask</button>
+            </form>
+
+            <div class="ask__controls">
+              <label class="control">
+                <span class="control__label">Spoken language</span>
+                <select id="language" class="control__field">
+                  <option value="unknown">Auto-detect</option>
+                  <option value="hi-IN">हिन्दी — Hindi</option>
+                  <option value="ta-IN">தமிழ் — Tamil</option>
+                  <option value="bn-IN">বাংলা — Bengali</option>
+                  <option value="mr-IN">मराठी — Marathi</option>
+                  <option value="te-IN">తెలుగు — Telugu</option>
+                  <option value="kn-IN">ಕನ್ನಡ — Kannada</option>
+                  <option value="ml-IN">മലയാളം — Malayalam</option>
+                  <option value="gu-IN">ગુજરાતી — Gujarati</option>
+                  <option value="pa-IN">ਪੰਜਾਬੀ — Punjabi</option>
+                  <option value="or-IN">ଓଡ଼ିଆ — Odia</option>
+                  <option value="as-IN">অসমীয়া — Assamese</option>
+                  <option value="ur-IN">اردو — Urdu</option>
+                  <option value="en-IN">English</option>
+                </select>
+              </label>
+
+              <label class="control control--switch">
+                <input id="rewrite" type="checkbox" />
+                <span class="control__label">LLM rewrite <em>(off-budget)</em></span>
+              </label>
+            </div>
+
+            <div class="examples" id="examples" hidden>
+              <span class="examples__label">Try</span>
+              <div class="examples__list" id="examples-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- ── answer ──────────────────────────────────────────────────── -->
+      <section class="panel panel--answer" id="answer-panel" hidden aria-labelledby="answer-heading">
+        <div class="answer__head">
+          <h2 id="answer-heading" class="panel__title">Answer</h2>
+          <span class="verdict" id="verdict"></span>
+        </div>
+
+        <div class="transcript" id="transcript" hidden></div>
+
+        <p class="answer__text" id="answer"></p>
+
+        <div class="rewrite" id="rewrite-block" hidden>
+          <span class="rewrite__label">LLM rewrite</span>
+          <p class="rewrite__text" id="rewrite-text"></p>
+        </div>
+
+        <div class="grounding" id="grounding" hidden></div>
+
+        <div class="sources" id="sources"></div>
+      </section>
+
+      <!-- ── trace ───────────────────────────────────────────────────── -->
+      <section class="panel panel--trace" id="trace-panel" hidden aria-labelledby="trace-heading">
+        <h2 id="trace-heading" class="panel__title">Pipeline trace</h2>
+
+        <div class="budget">
+          <div class="budget__bar">
+            <div class="budget__fill" id="budget-fill"></div>
+            <div class="budget__marker" style="left: 100%"><span>200 ms budget</span></div>
+          </div>
+          <div class="budget__readout">
+            <strong id="budget-total">—</strong>
+            <span id="budget-note"></span>
+          </div>
+        </div>
+
+        <table class="stages" id="stages">
+          <thead>
+            <tr><th scope="col">Stage</th><th scope="col">ms</th><th scope="col"></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="signals" id="signals"></div>
+      </section>
+
+      <!-- ── index card ──────────────────────────────────────────────── -->
+      <section class="panel panel--index" id="index-panel" hidden aria-labelledby="index-heading">
+        <h2 id="index-heading" class="panel__title">What was indexed</h2>
+        <p class="index__lede" id="index-lede"></p>
+        <table class="strategies" id="strategies">
+          <thead>
+            <tr>
+              <th scope="col">Chunking strategy</th>
+              <th scope="col">Spans</th>
+              <th scope="col">Shared</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="index__foot" id="index-foot"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>MS MARCO passages via <code>ai4bharat/MSMARCO-XI</code></span>
+      <span aria-hidden="true">·</span>
+      <span>speech by Sarvam Saaras</span>
+      <span aria-hidden="true">·</span>
+      <span class="footer__tag">#RAGInGoa</span>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
