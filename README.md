@@ -402,8 +402,23 @@ src/core/
 src/server/             HTTP server · Sarvam client
 src/tools/              ingest · build-index · bench · sweep · smoke · fetch-model
 public/                 the demo UI
-docs/DESIGN.md          why it is built this way, including what did not work
+docs/                   the engineering account — start at docs/ARCHITECTURE.md
 ```
+
+## Documentation
+
+| | |
+|---|---|
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Components, layers, boundaries, data flow, boot sequence, deployment topology |
+| [docs/PIPELINE.md](docs/PIPELINE.md) | One request end to end: the six stages, their costs, every failure path |
+| [docs/INDEXING.md](docs/INDEXING.md) | 55.6 GB → 65.5 MB fetched → 78,342 chunks → 49.4 MB, plus the on-disk format |
+| [docs/RETRIEVAL.md](docs/RETRIEVAL.md) | Binary/int8 search, BM25, RRF, routing, the cross-encoder, MMR, the shortlist sweep |
+| [docs/GUARDRAILS.md](docs/GUARDRAILS.md) | Input safety, abstention thresholds and where they came from, grounding |
+| [docs/HARNESS.md](docs/HARNESS.md) | Timeouts, retries, breakers, typed fallbacks, tracing, schema validation |
+| [docs/API.md](docs/API.md) | Full request and response shapes for all four endpoints |
+| [docs/CODEMAP.md](docs/CODEMAP.md) | File-by-file: what lives where, and why |
+| [docs/OPERATIONS.md](docs/OPERATIONS.md) | Running, rebuilding, benchmarking, deploying, troubleshooting |
+| [docs/DESIGN.md](docs/DESIGN.md) | Decision log, including what did not work |
 
 ---
 
